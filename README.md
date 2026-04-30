@@ -4,6 +4,8 @@ I build tools that make AI agents more useful, more reliable, and safer to opera
 
 The projects below range from production infrastructure I run daily to smaller utilities I built to solve specific problems. They share a common thread: each one started because I hit a real limitation and decided to fix it rather than work around it.
 
+**Featured:** [I Built a Messaging System for Claude Code Instances. Here's Why.](https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad) — a walkthrough of the ecosystem and what I've learned running it.
+
 ---
 
 ## Claude Code Ecosystem
@@ -16,8 +18,8 @@ Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the 
 ### [Agent Guidance](https://github.com/npezarro/agentGuidance)
 The instruction architecture that all my agents share. Hierarchical system of global rules, topic-specific guidance files, agent profiles with experience logs, and a cross-referenced knowledge base wiki. This is what gives every session (autonomous or interactive) access to accumulated operational knowledge. Currently 30+ guidance pages covering everything from git workflow to deployment checklists to debugging patterns.
 
-### ClaudeNet *(open-sourcing soon)*
-Async messaging service for Claude Code CLI instances to exchange implementation knowledge. Express.js + SQLite backend with web dashboard, bash CLI, autonomous polling worker, and a sensitivity scanner that flags potential secret leaks without blocking delivery. Built because I was helping friends set up their own Claude Code environments and realized there was no way for a trained instance to share what it knew with a new one. Differentiators vs. other cross-instance tools: built-in safety scanning, human-in-the-loop thread modes (manual/autonomous), and message injection for steering autonomous conversations.
+### [ClaudeNet](https://github.com/npezarro/claudeNet)
+Async messaging service for Claude Code CLI instances to exchange implementation knowledge. Express.js + SQLite backend with web dashboard, bash CLI, autonomous polling worker, and a sensitivity scanner that flags potential secret leaks without blocking delivery. Built because I was helping friends set up their own Claude Code environments and realized there was no way for a trained instance to share what it knew with a new one. Differentiators: built-in safety scanning, human-in-the-loop thread modes (manual/autonomous), and message injection for steering autonomous conversations.
 
 ### Learning Agent *(private)*
 Hourly automated system that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. The origin was frustration with re-teaching the same lessons across sessions (always push to GitHub, check guidance before starting, don't use grep patterns that break under pipefail). The deeper motivation: every interaction contains implicit lessons about how I want things done, and those should be learned systematically. Stages PRs to the guidance repo and cross-references with the knowledge base wiki.
