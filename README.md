@@ -36,8 +36,8 @@ Utilities I built to fill gaps in Claude Code's native capabilities. These make 
 ### [Page Reader](https://github.com/npezarro/page-reader)
 Node.js CLI that uses a headless browser to render JavaScript-heavy pages and extract clean text. Built because Claude Code's built-in web browsing returns empty or broken content on SPAs, modern forums, and React apps. Every agent in the ecosystem falls back to this when default web tools fail.
 
-### Browser Agent *(private, [public demo version](https://github.com/npezarro/claude-browser-agent))*
-Chrome extension plus relay server that gives Claude Code live control of a real browser tab, complete with existing cookies and login state. Built because headless tools like Playwright can't access logged-in sessions where authenticated data is needed. The agent can navigate, click, fill forms, read content, and take screenshots. I use it for testing deployments, automating authenticated workflows, and verifying changes work in the browser before reporting back.
+### [Browser Agent](https://github.com/npezarro/browser-agent)
+Chrome extension plus relay server that gives Claude Code live control of a real browser tab, complete with existing cookies and login state. Built because headless tools like Playwright can't access logged-in sessions where authenticated data is needed. MV3 extension with 30+ commands (navigate, click, type, upload, CDP trusted input for sites that check `isTrusted`, screenshots), a Node.js relay server, and a bash CLI. I use it for testing deployments, automating authenticated workflows, and verifying changes work in the browser before reporting back.
 
 ### [Claude Usage Monitor](https://github.com/npezarro/claude-usage-monitor)
 Queries the Claude Max OAuth usage endpoint for real-time 5-hour and 7-day utilization percentages. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.
