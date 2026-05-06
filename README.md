@@ -6,6 +6,8 @@ The projects below range from production infrastructure I run daily to smaller u
 
 **Featured:** [I Built a Messaging System for Claude Code Instances. Here's Why.](https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad) — a walkthrough of the ecosystem and what I've learned running it.
 
+And here's my [resume](https://github.com/npezarro/portfolio/blob/master/Nicholas%20Pezarro%20Resume.pdf).
+
 ---
 
 ## Claude Code Ecosystem
