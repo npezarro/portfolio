@@ -1,0 +1,184 @@
+/* ============================================================
+   VARIANT D — BRUTALIST
+   Raw. Monochrome. Anti-polish.
+   ============================================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* No max-width. Edge-to-edge. */
+
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0000ff;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  padding: 40px 0 40px 0;
+  border-bottom: 4px solid #000000;
+}
+
+.hero-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(80px, 15vw, 200px);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.hero-bio {
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: none;
+}
+
+.hero-links {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.hero-links a {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.divider-thick {
+  display: none;
+}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+
+.stats {
+  padding: 24px 0;
+  border-bottom: 3px solid #000000;
+  font-size: 1rem;
+}
+
+.stats p {
+  margin: 0;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.catalogue {
+  padding: 32px 0 16px 0;
+}
+
+.section-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 16px;
+  border-top: 3px solid #000000;
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   PROJECT CARDS
+   ============================================================ */
+
+.project {
+  display: block;
+  border: 2px solid #000000;
+  padding: 16px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.project:hover {
+  color: #000000;
+}
+
+.project:hover .arrow {
+  color: #0000ff;
+}
+
+.project-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.arrow {
+  font-weight: 400;
+}
+
+.project-desc {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.project-badges {
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+.about p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  border-top: 3px solid #000000;
+  padding: 24px 0;
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+footer a {
+  text-decoration: underline;
+}

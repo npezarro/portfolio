@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nick Pezarro — Portfolio</title>
+  <meta name="description" content="Nick Pezarro builds tools that make AI agents more useful, more reliable, and safer to operate. 30+ repo Claude Code ecosystem.">
+  <meta property="og:title" content="Nick Pezarro — Portfolio">
+  <meta property="og:description" content="Building the infrastructure layer for AI agent systems. 30+ repos, 50+ daily autonomous Claude CLI invocations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+
+  <!-- Table of Contents (desktop only) -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">On this page</div>
+    <ul>
+      <li><a href="#ecosystem" class="toc-link">Ecosystem</a></li>
+      <li><a href="#tools" class="toc-link">Tools</a></li>
+      <li><a href="#applied-ai" class="toc-link">Applied AI</a></li>
+      <li><a href="#automation" class="toc-link">Automation</a></li>
+      <li><a href="#background" class="toc-link">Background</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <span class="breadcrumb-item">Nick Pezarro</span>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-item breadcrumb-current">Portfolio</span>
+      <button class="mode-toggle" type="button" aria-label="Toggle dark/light mode" data-mode-toggle>
+        <span class="mode-icon mode-icon--light" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="2.9" y1="2.9" x2="4.3" y2="4.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="11.7" y1="11.7" x2="13.1" y2="13.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="11.7" y1="4.3" x2="13.1" y2="2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="2.9" y1="13.1" x2="4.3" y2="11.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </span>
+        <span class="mode-icon mode-icon--dark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 9.5A5.5 5.5 0 1 1 6.5 4a4 4 0 1 0 5.5 5.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- Hero / Page Header -->
+    <header class="hero">
+      <div class="page-icon">&#x1F6E0;&#xFE0F;</div>
+      <h1 class="page-title">Nick Pezarro's Portfolio</h1>
+      <p class="page-cover">
+        I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem.
+      </p>
+      <div class="hero-links">
+        <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener" class="inline-link">LinkedIn</a>
+        <span class="link-dot">&middot;</span>
+        <a href="https://github.com/npezarro" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+        <span class="link-dot">&middot;</span>
+        <a href="https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad" target="_blank" rel="noopener" class="inline-link">Featured Article</a>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Stats Callout -->
+      <div class="callout">
+        <span class="callout-icon">&#x1F4A1;</span>
+        <span class="callout-text">30+ repositories &middot; 50+ daily CLI invocations &middot; 1yr+ in production</span>
+      </div>
+
+      <hr class="divider">
+
+      <!-- ============================================================ -->
+      <!-- 01 — CLAUDE CODE ECOSYSTEM                                    -->
+      <!-- ============================================================ -->
+      <section id="ecosystem">
+        <div class="toggle-header" data-toggle="ecosystem-list">
+          <span class="toggle-icon">&#x25BC;</span>
+          <h2 class="section-title">Claude Code Ecosystem</h2>
+        </div>
+        <div class="toggle-body" id="ecosystem-list">
+
+          <a href="../projects/autonomous-dev.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-blue);">AD</span>
+            <span class="db-name">Autonomous Dev Agent</span>
+            <span class="db-desc">Cron-scheduled system that surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs. Safety guardrails gate on token usage.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+              <span class="badge badge--purple">Claude CLI</span>
+            </span>
+          </a>
+
+          <a href="../projects/agent-guidance.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">AG</span>
+            <span class="db-name">Agent Guidance</span>
+            <span class="db-desc">The instruction architecture all my agents share. Hierarchical rules, topic-specific guidance, agent profiles with experience logs, and a cross-referenced knowledge base wiki. 30+ guidance pages.</span>
+            <span class="db-badges">
+              <span class="badge badge--green">Markdown</span>
+              <span class="badge badge--orange">Bash</span>
+            </span>
+          </a>
+
+          <a href="../projects/claudenet.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-purple);">CN</span>
+            <span class="db-name">ClaudeNet</span>
+            <span class="db-desc">Async messaging service for Claude Code instances to exchange implementation knowledge. Express + SQLite backend, web dashboard, bash CLI, autonomous polling worker, and secret-leak scanning.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Express.js</span>
+              <span class="badge badge--green">SQLite</span>
+            </span>
+          </a>
+
+          <a href="../projects/learning-agent.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-orange);">LA</span>
+            <span class="db-name">Learning Agent <span class="private-tag">Private</span></span>
+            <span class="db-desc">Hourly system that reviews session activity, detects uncaptured corrections, and propagates them into the guidance system. Every interaction contains implicit lessons; this captures them systematically.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+              <span class="badge badge--purple">Claude CLI</span>
+            </span>
+          </a>
+
+          <a href="../projects/claude-bakeoff.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-blue);">CB</span>
+            <span class="db-name">Claude Bakeoff</span>
+            <span class="db-desc">A/B testing framework for Claude CLI instruction environments. Run the same task under two different instruction sets and compare results with LLM-as-judge evaluation.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+              <span class="badge badge--orange">Bash</span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ============================================================ -->
+      <!-- 02 — DEVELOPER TOOLS                                          -->
+      <!-- ============================================================ -->
+      <section id="tools">
+        <div class="toggle-header" data-toggle="tools-list">
+          <span class="toggle-icon">&#x25BC;</span>
+          <h2 class="section-title">Developer Tools</h2>
+        </div>
+        <div class="toggle-body" id="tools-list">
+
+          <a href="../projects/browser-agent.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-blue);">BA</span>
+            <span class="db-name">Browser Agent</span>
+            <span class="db-desc">Chrome extension + relay server that gives Claude Code live control of a real browser tab with existing cookies and login state. MV3, 30+ commands, CDP trusted input, screenshots.</span>
+            <span class="db-badges">
+              <span class="badge badge--purple">Chrome MV3</span>
+              <span class="badge badge--blue">Node.js</span>
+            </span>
+          </a>
+
+          <a href="../projects/page-reader.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">PR</span>
+            <span class="db-name">Page Reader</span>
+            <span class="db-desc">Headless browser CLI that renders JavaScript-heavy pages and extracts clean text. The fallback every agent uses when default web tools return empty or broken content on SPAs.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+              <span class="badge badge--green">Puppeteer</span>
+            </span>
+          </a>
+
+          <a href="../projects/usage-monitor.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-orange);">UM</span>
+            <span class="db-name">Claude Usage Monitor</span>
+            <span class="db-desc">Real-time 5-hour and 7-day utilization tracking for Claude Max. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+              <span class="badge badge--orange">OAuth</span>
+            </span>
+          </a>
+
+          <a href="../projects/token-tracker.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-purple);">TT</span>
+            <span class="db-name">Claude Token Tracker</span>
+            <span class="db-desc">Per-component token usage tracking for Claude Code ecosystems. Breaks down where tokens are being spent across agents and tasks.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Node.js</span>
+            </span>
+          </a>
+
+          <a href="../projects/tray-notifier.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">TN</span>
+            <span class="db-name">Claude Tray Notifier</span>
+            <span class="db-desc">macOS menu bar app that surfaces notifications from Claude Code CLI sessions. Electron-based with shell installer and auto-update pipeline.</span>
+            <span class="db-badges">
+              <span class="badge badge--purple">Electron</span>
+              <span class="badge badge--green">macOS</span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ============================================================ -->
+      <!-- 03 — APPLIED AI                                               -->
+      <!-- ============================================================ -->
+      <section id="applied-ai">
+        <div class="toggle-header" data-toggle="applied-ai-list">
+          <span class="toggle-icon">&#x25BC;</span>
+          <h2 class="section-title">Applied AI</h2>
+        </div>
+        <div class="toggle-body" id="applied-ai-list">
+
+          <a href="../projects/phone-agent.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-orange);">PA</span>
+            <span class="db-name">Phone Agent <span class="private-tag">Private</span></span>
+            <span class="db-desc">AI phone calling system via Google Voice WebRTC interception. Deepgram STT, Claude via Groq for conversation, ElevenLabs TTS. Makes actual phone calls with natural voice.</span>
+            <span class="db-badges">
+              <span class="badge badge--orange">WebRTC</span>
+              <span class="badge badge--green">Deepgram</span>
+            </span>
+          </a>
+
+          <a href="../projects/botlink.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-purple);">BL</span>
+            <span class="db-name">BotLink <span class="private-tag">Private</span></span>
+            <span class="db-desc">Professional network for AI agents. Profiles, feeds, discussions. Exploring what it looks like when AI agents have persistent public identities.</span>
+            <span class="db-badges">
+              <span class="badge badge--blue">Next.js</span>
+              <span class="badge badge--purple">Prisma</span>
+            </span>
+          </a>
+
+          <a href="../projects/interview-practice.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">IP</span>
+            <span class="db-name">Interview Practice <span class="private-tag">Private</span></span>
+            <span class="db-desc">Live audio PM mock interview tool. Claude CLI as interviewer, browser handles TTS/STT, structured scoring rubric evaluates responses across 5 categories.</span>
+            <span class="db-badges">
+              <span class="badge badge--orange">WebSocket</span>
+              <span class="badge badge--purple">Speech API</span>
+            </span>
+          </a>
+
+          <a href="../projects/trading-agent.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-blue);">TA</span>
+            <span class="db-name">Trading Agent <span class="private-tag">Private</span></span>
+            <span class="db-desc">Autonomous swing trading system with three-loop architecture, 6 strategies, and SEC EDGAR/FRED data integration. Connected to Alpaca paper trading with bracket orders and drawdown circuit breakers.</span>
+            <span class="db-badges">
+              <span class="badge badge--green">Python</span>
+              <span class="badge badge--orange">Alpaca API</span>
+            </span>
+          </a>
+
+          <a href="../projects/auto-shorts.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-orange);">AS</span>
+            <span class="db-name">Auto Shorts <span class="private-tag">Private</span></span>
+            <span class="db-desc">YouTube Shorts generation pipeline. Source cooking videos to clip-worthy moments to cuts to uploads. Smart face-tracking crop, per-clip analytics, and a learning engine that improves over time.</span>
+            <span class="db-badges">
+              <span class="badge badge--purple">FFmpeg</span>
+              <span class="badge badge--blue">YouTube API</span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ============================================================ -->
+      <!-- 04 — AUTOMATION & UTILITIES                                   -->
+      <!-- ============================================================ -->
+      <section id="automation">
+        <div class="toggle-header" data-toggle="automation-list">
+          <span class="toggle-icon">&#x25BC;</span>
+          <h2 class="section-title">Automation &amp; Utilities</h2>
+        </div>
+        <div class="toggle-body" id="automation-list">
+
+          <a href="../projects/reddit-auto-hide.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-orange);">RH</span>
+            <span class="db-name">Reddit Auto-Hide</span>
+            <span class="db-desc">Tampermonkey userscript that auto-hides posts after scrolling past them. Cross-device sync via Reddit's native hide API. Works on old and new Reddit.</span>
+            <span class="db-badges">
+              <span class="badge badge--orange">Tampermonkey</span>
+            </span>
+          </a>
+
+          <a href="../projects/mic-volume-guard.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-purple);">MV</span>
+            <span class="db-name">Mic Volume Guard</span>
+            <span class="db-desc">Windows background watchdog that keeps microphone recording devices at 100% volume. Solves an annoying behavior where apps reset mic levels.</span>
+            <span class="db-badges">
+              <span class="badge badge--purple">Windows</span>
+            </span>
+          </a>
+
+          <a href="../projects/free-games.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-blue);">FG</span>
+            <span class="db-name">Free Games Pipeline <span class="private-tag">Private</span></span>
+            <span class="db-desc">Multi-platform free game discovery and auto-checkout. Scans Epic, GOG, Steam, and Amazon Prime Gaming. Tampermonkey handles the claiming.</span>
+            <span class="db-badges">
+              <span class="badge badge--orange">Tampermonkey</span>
+              <span class="badge badge--blue">Node.js</span>
+            </span>
+          </a>
+
+          <a href="../projects/fb-marketplace.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">FM</span>
+            <span class="db-name">FB Marketplace Poster <span class="private-tag">Private</span></span>
+            <span class="db-desc">Google Photos to Claude vision to browser-agent to Facebook listing. Takes photos of items, generates descriptions and pricing via Claude, posts automatically.</span>
+            <span class="db-badges">
+              <span class="badge badge--purple">Claude Vision</span>
+              <span class="badge badge--green">Browser Agent</span>
+            </span>
+          </a>
+
+          <a href="../projects/grocery-genius.html" class="db-row">
+            <span class="db-icon" style="--pill-bg: var(--pill-green);">GG</span>
+            <span class="db-name">Grocery Genius</span>
+            <span class="db-desc">Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.</span>
+            <span class="db-badges">
+              <span class="badge badge--orange">Kroger API</span>
+              <span class="badge badge--blue">Node.js</span>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ============================================================ -->
+      <!-- 05 — BACKGROUND                                               -->
+      <!-- ============================================================ -->
+      <section id="background">
+        <div class="toggle-header" data-toggle="background-content">
+          <span class="toggle-icon">&#x25BC;</span>
+          <h2 class="section-title">Background</h2>
+        </div>
+        <div class="toggle-body" id="background-content">
+
+          <p class="body-text">
+            Senior PM with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.
+          </p>
+          <p class="body-text">
+            This portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.
+          </p>
+
+          <div class="quote-block">
+            <p>Most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles.</p>
+          </div>
+
+          <p class="body-text body-text--location">
+            Based in San Francisco.
+          </p>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 Nick Pezarro</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://tuller.medium.com" target="_blank" rel="noopener">Medium</a>
+    </footer>
+
+  </div>
+
+<script src="../assets/switcher.js?v=1"></script>
+</body>
+</html>

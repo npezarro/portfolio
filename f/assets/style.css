@@ -1,0 +1,664 @@
+/* ============================================================
+   VARIANT F — RETRO OS / WINDOWS 95
+   ============================================================ */
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #008080;
+  color: #000;
+  min-height: 100vh;
+  padding-bottom: 36px; /* room for taskbar */
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Scrollbar (Webkit) ---- */
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  min-height: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  height: 18px;
+  width: 18px;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #c0c0c0 #c0c0c0;
+  scrollbar-width: auto;
+}
+
+/* ---- Desktop ---- */
+.desktop {
+  padding: 8px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---- Main Window ---- */
+.window {
+  width: 100%;
+  max-width: 860px;
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  box-shadow: 2px 2px 0 #000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Title Bar ---- */
+.title-bar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 3px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 2px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.title-bar-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.title-btn {
+  width: 18px;
+  height: 16px;
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  font-size: 9px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000;
+  padding: 0;
+  font-family: inherit;
+}
+
+.title-btn:active {
+  border-style: inset;
+}
+
+.title-btn-close:hover {
+  background: #c0c0c0;
+}
+
+/* ---- Menu Bar ---- */
+.menu-bar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  padding: 2px 4px;
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.menu-item {
+  padding: 2px 8px;
+  font-size: 12px;
+  cursor: default;
+  user-select: none;
+}
+
+.menu-item:hover {
+  background: #000080;
+  color: #fff;
+}
+
+.menu-item u {
+  text-decoration: underline;
+}
+
+/* ---- Window Body ---- */
+.window-body {
+  background: #c0c0c0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* ---- Generic Dialog Box ---- */
+.dialog-box {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-title-bar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 6px;
+  user-select: none;
+}
+
+.dialog-content {
+  padding: 16px;
+  border: 2px inset #808080;
+  margin: 6px;
+  background: #fff;
+}
+
+/* ---- Welcome Dialog (Hero) ---- */
+.welcome-dialog .dialog-content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.welcome-icon-col {
+  flex-shrink: 0;
+}
+
+.welcome-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.welcome-text-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.welcome-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.welcome-kicker {
+  font-size: 11px;
+  color: #808080;
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+
+.welcome-bio {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.welcome-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  padding: 4px 16px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  min-width: 80px;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #d0d0d0;
+}
+
+.btn:active {
+  border-style: inset;
+  padding: 5px 15px 3px 17px;
+}
+
+/* ---- System Properties (Stats) ---- */
+.system-props .dialog-content {
+  padding: 12px 16px;
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #000;
+}
+
+.stat-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000080;
+  font-family: monospace;
+}
+
+/* ---- Folder (details/summary) ---- */
+.folder {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+}
+
+.folder-summary {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  list-style: none;
+  outline: none;
+}
+
+.folder-summary::-webkit-details-marker {
+  display: none;
+}
+
+.folder-summary::before {
+  content: ">";
+  font-family: monospace;
+  font-size: 12px;
+  width: 12px;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+details[open] > .folder-summary::before {
+  transform: rotate(90deg);
+}
+
+.folder-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.folder-name {
+  flex: 1;
+}
+
+/* ---- File List ---- */
+.file-list {
+  border: 2px inset #808080;
+  margin: 4px;
+  background: #fff;
+}
+
+/* File List Header */
+.file-list-header {
+  display: grid;
+  grid-template-columns: 28px 1fr 110px 110px;
+  padding: 3px 6px;
+  background: #c0c0c0;
+  border-bottom: 2px outset #dfdfdf;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  user-select: none;
+}
+
+.fh-icon { }
+.fh-name { }
+.fh-type { }
+.fh-size { }
+
+/* File Row */
+.file-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 110px 110px;
+  padding: 3px 6px;
+  font-size: 12px;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.file-row:nth-child(odd) {
+  background: #fff;
+}
+
+.file-row:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.file-row:hover {
+  background: #000080;
+  color: #fff;
+}
+
+.file-row:hover .private-tag {
+  color: #ffff00;
+  border-color: #ffff00;
+}
+
+.file-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.file-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-type,
+.file-size {
+  font-family: monospace;
+  font-size: 11px;
+  color: #444;
+}
+
+.file-row:hover .file-type,
+.file-row:hover .file-size {
+  color: #ccc;
+}
+
+/* Private Tag */
+.private-tag {
+  font-size: 9px;
+  font-weight: 400;
+  border: 1px solid #808080;
+  padding: 0 4px;
+  margin-left: 4px;
+  color: #808080;
+  font-family: monospace;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* File Description Row */
+.file-desc {
+  padding: 2px 6px 6px 34px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+  background: inherit;
+}
+
+/* Alternate background on desc too */
+.file-row:nth-child(odd) + .file-desc {
+  background: #fff;
+}
+
+.file-row:nth-child(even) + .file-desc {
+  background: #f0f0f0;
+}
+
+/* ---- About Dialog ---- */
+.about-dialog .dialog-content {
+  padding: 16px 20px;
+}
+
+.about-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000080;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.about-heading em {
+  font-style: italic;
+}
+
+.about-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.about-location {
+  font-style: italic;
+  color: #444;
+}
+
+.about-ok-row {
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ---- Window Footer ---- */
+.window-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px 4px;
+  font-size: 11px;
+  color: #444;
+  border-top: 1px solid #808080;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #000080;
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+/* ---- Taskbar ---- */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: #c0c0c0;
+  border-top: 2px outset #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px;
+  z-index: 9999;
+  user-select: none;
+}
+
+.start-btn {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  color: #000;
+}
+
+.start-btn:active {
+  border-style: inset;
+}
+
+.start-icon {
+  font-size: 14px;
+  color: #008000;
+}
+
+.taskbar-tray {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px inset #808080;
+  padding: 2px 10px;
+  height: 28px;
+  background: #c0c0c0;
+}
+
+.taskbar-clock {
+  font-size: 12px;
+  font-family: monospace;
+  color: #000;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+
+  .desktop {
+    padding: 4px;
+  }
+
+  .window-body {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .welcome-dialog .dialog-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .welcome-links {
+    justify-content: center;
+  }
+
+  .welcome-name {
+    font-size: 20px;
+  }
+
+  /* Collapse file list grid on mobile */
+  .file-list-header {
+    grid-template-columns: 24px 1fr;
+  }
+
+  .fh-type, .fh-size {
+    display: none;
+  }
+
+  .file-row {
+    grid-template-columns: 24px 1fr;
+  }
+
+  .file-type, .file-size {
+    display: none;
+  }
+
+  .file-desc {
+    padding-left: 30px;
+  }
+
+  .dialog-content {
+    padding: 10px;
+    margin: 4px;
+  }
+
+  .stat-row {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .title-bar-text {
+    font-size: 11px;
+  }
+
+  .menu-bar {
+    font-size: 11px;
+  }
+
+  .welcome-icon {
+    font-size: 36px;
+  }
+
+  .welcome-name {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 3px 10px;
+    font-size: 11px;
+    min-width: 64px;
+  }
+}
