@@ -1,6 +1,6 @@
 /* ==========================================================================
    Portfolio Variant Switcher
-   Floating UI for navigating between all 11 design variants.
+   Floating UI for navigating between all 20 design variants.
    ========================================================================== */
 (function () {
   'use strict';
@@ -18,12 +18,20 @@
     { key: 'i', label: 'I: Playful',      desc: 'Rounded, colorful, bouncy' },
     { key: 'j', label: 'J: Blueprint',    desc: 'Technical drawing' },
     { key: 'k', label: 'K: Japanese',     desc: 'Zen minimalism' },
+    { key: 'l', label: 'L: Compact Terminal', desc: 'Dense single-row list' },
+    { key: 'm', label: 'M: Compact Editorial', desc: 'Two-col grid, tight' },
+    { key: 'n', label: 'N: Compact Newspaper', desc: '3-col dense broadsheet' },
+    { key: 'o', label: 'O: Compact Japanese',  desc: 'Names-only zen index' },
+    { key: 'p', label: 'P: Monospace Zen',  desc: 'Terminal + Japanese hybrid' },
+    { key: 'q', label: 'Q: Magazine Spread', desc: 'Editorial + Newspaper hybrid' },
+    { key: 'r', label: 'R: Code Journal',   desc: 'Terminal + Editorial hybrid' },
+    { key: 's', label: 'S: Quiet Press',    desc: 'Newspaper + Japanese hybrid' },
   ];
 
   // Detect which variant we're on from the URL path
   var path = window.location.pathname;
   // Match /portfolio/X/ or /portfolio/X/index.html where X is a single letter
-  var match = path.match(/\/portfolio\/([a-k])\/?/);
+  var match = path.match(/\/portfolio\/([a-s])\/?/);
   var currentKey = match ? match[1] : '';
 
   // Build the base path (handles both /portfolio/ and /portfolio/a/)

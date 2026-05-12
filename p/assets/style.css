@@ -1,0 +1,307 @@
+/* ============================================================
+   MONOSPACE ZEN — Variant P
+   Terminal typography meets Japanese minimalism
+   ============================================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --fg: #8aab7a;
+  --fg-heading: #d4d0c8;
+  --accent: #c23616;
+  --rule: #1a1a1a;
+  --dim: #4a4a4a;
+  --font: 'JetBrains Mono', monospace;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Hero --- */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 0;
+  position: relative;
+  text-align: left;
+}
+
+.hero-accent {
+  position: absolute;
+  left: -20px;
+  top: 124px;
+  width: 1px;
+  height: 60px;
+  background: var(--accent);
+}
+
+.hero-name {
+  font-family: var(--font);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 400;
+  color: var(--fg-heading);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.hero-tagline {
+  margin-top: 24px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--dim);
+  letter-spacing: 0.05em;
+}
+
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-link {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+  color: var(--fg-heading);
+}
+
+/* --- Stats --- */
+.stats {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--fg-heading);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+}
+
+/* --- Section Header --- */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: right;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.section-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-num {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* --- Catalogue Sections --- */
+.catalogue {
+  margin-top: 48px;
+}
+
+.catalogue[data-align="left"] .project {
+  text-align: left;
+}
+
+.catalogue[data-align="right"] .project {
+  text-align: right;
+}
+
+/* --- Project Entries --- */
+.project {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: none;
+}
+
+.project:last-of-type {
+  border-bottom: none;
+}
+
+.project-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--fg-heading);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.project:hover .project-name {
+  color: var(--accent);
+}
+
+.private-tag {
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.project-desc {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--fg);
+  line-height: 1.8;
+}
+
+.project-badges {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+}
+
+/* --- About --- */
+.about {
+  margin-top: 48px;
+  padding-bottom: 48px;
+}
+
+.about-body {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--fg);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.about-body--location {
+  color: var(--dim);
+  font-size: 13px;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 48px;
+  padding: 32px 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+}
+
+footer a {
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--fg-heading);
+}
+
+.footer-sep {
+  margin: 0 8px;
+  opacity: 0.3;
+}
+
+/* --- Scroll Reveal --- */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+[data-reveal].visible {
+  opacity: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero-accent {
+    left: -8px;
+    top: 84px;
+  }
+
+  .stats {
+    margin-top: 60px;
+  }
+
+  .catalogue[data-align="right"] .project {
+    text-align: left;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
