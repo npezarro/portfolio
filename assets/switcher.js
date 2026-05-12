@@ -34,6 +34,9 @@
   var match = path.match(/\/portfolio\/([a-s])\/?/);
   var currentKey = match ? match[1] : '';
 
+  // Only show switcher on variant pages, not the main portfolio
+  if (!currentKey) return;
+
   // Build the base path (handles both /portfolio/ and /portfolio/a/)
   var basePath = '/portfolio/';
 
