@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+<head>
+  <meta charset="UTF-8">
+  <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Grocery Genius — Nick Pezarro</title>
+  <meta name="description" content="Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.">
+  <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="../assets/style.css?v=1">
+  <link rel="stylesheet" href="../assets/project.css?v=1">
+  <script defer src="../assets/site.js?v=1"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="sticky-chrome">
+      <div class="unified-bar">
+        <a href="../" class="nav-mark">
+          <svg class="nav-glyph" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 2h10v10H2z" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M5 5h4v4H5z" fill="currentColor" opacity="0.5"/>
+          </svg>
+          <span class="nav-text">Nick Pezarro</span>
+        </a>
+        <div aria-hidden="true"></div>
+        <div class="unified-actions">
+          <button class="mode-toggle" type="button" aria-label="Toggle color mode" data-mode-toggle>
+            <span class="mode-toggle-track">
+              <span class="mode-toggle-i" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="1.8" stroke="currentColor" stroke-width="1.1"/><line x1="5" y1="0.5" x2="5" y2="2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="5" y1="8" x2="5" y2="9.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="0.5" y1="5" x2="2" y2="5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="8" y1="5" x2="9.5" y2="5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="1.6" y1="1.6" x2="2.7" y2="2.7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="7.3" y1="7.3" x2="8.4" y2="8.4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="7.3" y1="2.7" x2="8.4" y2="1.6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="1.6" y1="8.4" x2="2.7" y2="7.3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span class="mode-toggle-thumb"></span>
+              <span class="mode-toggle-o" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M7.5 6A3.5 3.5 0 1 1 4 2a2.5 2.5 0 1 0 3.5 4z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <a href="../" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Projects
+      </a>
+
+      <section class="project-hero">
+        <span class="project-hero-kicker">04 &middot; Automation & Utilities</span>
+        <h1 class="project-hero-title">Grocery Genius</h1>
+        <p class="project-hero-subtitle">Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.</p>
+        <div class="project-hero-badges">
+            <span class="project-badge">Kroger API</span>
+            <span class="project-badge">Node.js</span>
+        </div>
+        <a href="https://github.com/npezarro/groceryGenius" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </section>
+
+      
+      <div class="project-visual">
+        <div class="mockup-terminal">
+          <div class="mockup-terminal-bar">
+            <div class="mockup-terminal-dot"></div>
+            <div class="mockup-terminal-dot"></div>
+            <div class="mockup-terminal-dot"></div>
+            <div class="mockup-terminal-title">grocery-genius — price check</div>
+          </div>
+          <div class="mockup-terminal-body"><pre style="margin:0;white-space:pre-wrap;font-family:inherit;"><span class="prompt">$</span> <span class="cmd">grocery-genius check "organic milk"</span>
+
+<span class="info">Searching Kroger stores near 94107...</span>
+
+<span class="output">Organic Valley Whole Milk, 64oz</span>
+  Kroger Market St    <span class="success">$5.49</span>  <span class="dim">(sale, reg $6.99)</span>
+  Kroger 4th St       $6.99
+  Kroger Potrero      $6.99
+
+<span class="output">Horizon Organic 2%, 64oz</span>
+  Kroger Market St    $6.29
+  Kroger 4th St       <span class="success">$5.99</span>  <span class="dim">(sale, reg $6.29)</span>
+  Kroger Potrero      $6.29
+
+<span class="success">Best deal: Organic Valley @ Market St — $5.49</span></pre></div>
+        </div>
+      </div>
+
+      <section class="project-features">
+        <h3>Key Features</h3>
+        <ul class="feature-list">
+          <li>Kroger API integration for real-time prices</li>
+          <li>Cross-store price comparison</li>
+          <li>Deal and sale tracking</li>
+          <li>Shopping list optimization</li>
+          <li>Price history tracking</li>
+          <li>Weekly best-deal notifications</li>
+        </ul>
+      </section>
+
+      <nav class="project-nav">
+        <a href="fb-marketplace.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
+        <span></span>
+      </nav>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 Nick Pezarro</span>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://tuller.medium.com" target="_blank" rel="noopener">Medium</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
