@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Pezarro - Portfolio</title>
+  <meta name="description" content="Nick Pezarro builds tools that make AI agents more useful, more reliable, and safer to operate. 30+ repo Claude Code ecosystem.">
+  <meta property="og:title" content="Nick Pezarro - Portfolio">
+  <meta property="og:description" content="Building the infrastructure layer for AI agent systems. 30+ repos, 50+ daily autonomous Claude CLI invocations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#008080">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- DESKTOP                                                       -->
+  <!-- ============================================================ -->
+  <div class="desktop">
+
+    <!-- ============================================================ -->
+    <!-- MAIN WINDOW                                                   -->
+    <!-- ============================================================ -->
+    <div class="window" id="main-window">
+
+      <!-- Title bar -->
+      <div class="title-bar" id="title-bar">
+        <div class="title-bar-left">
+          <span class="title-bar-icon">&#128187;</span>
+          <span class="title-bar-text">Nick Pezarro - Portfolio</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="title-btn" aria-label="Minimize">&#9644;</button>
+          <button class="title-btn" aria-label="Maximize">&#9633;</button>
+          <button class="title-btn title-btn-close" aria-label="Close">&#10005;</button>
+        </div>
+      </div>
+
+      <!-- Menu bar -->
+      <div class="menu-bar">
+        <span class="menu-item"><u>F</u>ile</span>
+        <span class="menu-item"><u>E</u>dit</span>
+        <span class="menu-item"><u>V</u>iew</span>
+        <span class="menu-item"><u>H</u>elp</span>
+      </div>
+
+      <!-- Window body -->
+      <div class="window-body">
+
+        <!-- ======================================================== -->
+        <!-- WELCOME DIALOG (Hero)                                     -->
+        <!-- ======================================================== -->
+        <div class="dialog-box welcome-dialog">
+          <div class="dialog-title-bar">
+            <span>Welcome</span>
+          </div>
+          <div class="dialog-content">
+            <div class="welcome-icon-col">
+              <div class="welcome-icon">&#128075;</div>
+            </div>
+            <div class="welcome-text-col">
+              <h1 class="welcome-name">Nick Pezarro</h1>
+              <p class="welcome-kicker">Portfolio &middot; 2025-26</p>
+              <p class="welcome-bio">
+                I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem.
+              </p>
+              <div class="welcome-links">
+                <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener" class="btn">OK &mdash; LinkedIn</a>
+                <a href="https://github.com/npezarro" target="_blank" rel="noopener" class="btn">GitHub</a>
+                <a href="https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad" target="_blank" rel="noopener" class="btn">Featured Article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- SYSTEM PROPERTIES (Stats)                                 -->
+        <!-- ======================================================== -->
+        <div class="dialog-box system-props">
+          <div class="dialog-title-bar">
+            <span>System Properties</span>
+          </div>
+          <div class="dialog-content stats-grid">
+            <div class="stat-row">
+              <span class="stat-label">Repositories:</span>
+              <span class="stat-value">30+</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Daily CLI invocations:</span>
+              <span class="stat-value">50+</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Running in production:</span>
+              <span class="stat-value">1yr+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- 01 - CLAUDE CODE ECOSYSTEM                                -->
+        <!-- ======================================================== -->
+        <details class="folder" open>
+          <summary class="folder-summary">
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-name">01 - Claude Code Ecosystem</span>
+          </summary>
+          <div class="file-list">
+            <div class="file-list-header">
+              <span class="fh-icon"></span>
+              <span class="fh-name">Name</span>
+              <span class="fh-type">Type</span>
+              <span class="fh-size">Tags</span>
+            </div>
+
+            <a href="../projects/autonomous-dev.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Autonomous Dev Agent</span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size">Claude CLI</span>
+            </a>
+            <div class="file-desc">Cron-scheduled system that surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs. Safety guardrails gate on token usage.</div>
+
+            <a href="../projects/agent-guidance.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Agent Guidance</span>
+              <span class="file-type">Markdown</span>
+              <span class="file-size">Bash</span>
+            </a>
+            <div class="file-desc">The instruction architecture all my agents share. Hierarchical rules, topic-specific guidance, agent profiles with experience logs, and a cross-referenced knowledge base wiki. 30+ guidance pages.</div>
+
+            <a href="../projects/claudenet.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">ClaudeNet</span>
+              <span class="file-type">Express.js</span>
+              <span class="file-size">SQLite</span>
+            </a>
+            <div class="file-desc">Async messaging service for Claude Code instances to exchange implementation knowledge. Express + SQLite backend, web dashboard, bash CLI, autonomous polling worker, and secret-leak scanning.</div>
+
+            <a href="../projects/learning-agent.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Learning Agent <span class="private-tag">Private</span></span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size">Claude CLI</span>
+            </a>
+            <div class="file-desc">Hourly system that reviews session activity, detects uncaptured corrections, and propagates them into the guidance system. Every interaction contains implicit lessons; this captures them systematically.</div>
+
+            <a href="../projects/claude-bakeoff.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Claude Bakeoff</span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size">Bash</span>
+            </a>
+            <div class="file-desc">A/B testing framework for Claude CLI instruction environments. Run the same task under two different instruction sets and compare results with LLM-as-judge evaluation.</div>
+          </div>
+        </details>
+
+        <!-- ======================================================== -->
+        <!-- 02 - DEVELOPER TOOLS                                      -->
+        <!-- ======================================================== -->
+        <details class="folder" open>
+          <summary class="folder-summary">
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-name">02 - Developer Tools</span>
+          </summary>
+          <div class="file-list">
+            <div class="file-list-header">
+              <span class="fh-icon"></span>
+              <span class="fh-name">Name</span>
+              <span class="fh-type">Type</span>
+              <span class="fh-size">Tags</span>
+            </div>
+
+            <a href="../projects/browser-agent.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Browser Agent</span>
+              <span class="file-type">Chrome MV3</span>
+              <span class="file-size">Node.js</span>
+            </a>
+            <div class="file-desc">Chrome extension + relay server that gives Claude Code live control of a real browser tab with existing cookies and login state. MV3, 30+ commands, CDP trusted input, screenshots.</div>
+
+            <a href="../projects/page-reader.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Page Reader</span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size">Puppeteer</span>
+            </a>
+            <div class="file-desc">Headless browser CLI that renders JavaScript-heavy pages and extracts clean text. The fallback every agent uses when default web tools return empty or broken content on SPAs.</div>
+
+            <a href="../projects/usage-monitor.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Claude Usage Monitor</span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size">OAuth</span>
+            </a>
+            <div class="file-desc">Real-time 5-hour and 7-day utilization tracking for Claude Max. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.</div>
+
+            <a href="../projects/token-tracker.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Claude Token Tracker</span>
+              <span class="file-type">Node.js</span>
+              <span class="file-size"></span>
+            </a>
+            <div class="file-desc">Per-component token usage tracking for Claude Code ecosystems. Breaks down where tokens are being spent across agents and tasks.</div>
+
+            <a href="../projects/tray-notifier.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Claude Tray Notifier</span>
+              <span class="file-type">Electron</span>
+              <span class="file-size">macOS</span>
+            </a>
+            <div class="file-desc">macOS menu bar app that surfaces notifications from Claude Code CLI sessions. Electron-based with shell installer and auto-update pipeline.</div>
+          </div>
+        </details>
+
+        <!-- ======================================================== -->
+        <!-- 03 - APPLIED AI                                           -->
+        <!-- ======================================================== -->
+        <details class="folder" open>
+          <summary class="folder-summary">
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-name">03 - Applied AI</span>
+          </summary>
+          <div class="file-list">
+            <div class="file-list-header">
+              <span class="fh-icon"></span>
+              <span class="fh-name">Name</span>
+              <span class="fh-type">Type</span>
+              <span class="fh-size">Tags</span>
+            </div>
+
+            <a href="../projects/phone-agent.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Phone Agent <span class="private-tag">Private</span></span>
+              <span class="file-type">WebRTC</span>
+              <span class="file-size">Deepgram</span>
+            </a>
+            <div class="file-desc">AI phone calling system via Google Voice WebRTC interception. Deepgram STT, Claude via Groq for conversation, ElevenLabs TTS. Makes actual phone calls with natural voice.</div>
+
+            <a href="../projects/botlink.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">BotLink <span class="private-tag">Private</span></span>
+              <span class="file-type">Next.js</span>
+              <span class="file-size">Prisma</span>
+            </a>
+            <div class="file-desc">Professional network for AI agents. Profiles, feeds, discussions. Exploring what it looks like when AI agents have persistent public identities.</div>
+
+            <a href="../projects/interview-practice.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Interview Practice <span class="private-tag">Private</span></span>
+              <span class="file-type">WebSocket</span>
+              <span class="file-size">Speech API</span>
+            </a>
+            <div class="file-desc">Live audio PM mock interview tool. Claude CLI as interviewer, browser handles TTS/STT, structured scoring rubric evaluates responses across 5 categories.</div>
+
+            <a href="../projects/trading-agent.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Trading Agent <span class="private-tag">Private</span></span>
+              <span class="file-type">Python</span>
+              <span class="file-size">Alpaca API</span>
+            </a>
+            <div class="file-desc">Autonomous swing trading system with three-loop architecture, 6 strategies, and SEC EDGAR/FRED data integration. Connected to Alpaca paper trading with bracket orders and drawdown circuit breakers.</div>
+
+            <a href="../projects/auto-shorts.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Auto Shorts <span class="private-tag">Private</span></span>
+              <span class="file-type">FFmpeg</span>
+              <span class="file-size">YouTube API</span>
+            </a>
+            <div class="file-desc">YouTube Shorts generation pipeline. Source cooking videos to clip-worthy moments to cuts to uploads. Smart face-tracking crop, per-clip analytics, and a learning engine that improves over time.</div>
+          </div>
+        </details>
+
+        <!-- ======================================================== -->
+        <!-- 04 - AUTOMATION & UTILITIES                               -->
+        <!-- ======================================================== -->
+        <details class="folder" open>
+          <summary class="folder-summary">
+            <span class="folder-icon">&#128193;</span>
+            <span class="folder-name">04 - Automation &amp; Utilities</span>
+          </summary>
+          <div class="file-list">
+            <div class="file-list-header">
+              <span class="fh-icon"></span>
+              <span class="fh-name">Name</span>
+              <span class="fh-type">Type</span>
+              <span class="fh-size">Tags</span>
+            </div>
+
+            <a href="../projects/reddit-auto-hide.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Reddit Auto-Hide</span>
+              <span class="file-type">Tampermonkey</span>
+              <span class="file-size"></span>
+            </a>
+            <div class="file-desc">Tampermonkey userscript that auto-hides posts after scrolling past them. Cross-device sync via Reddit's native hide API. Works on old and new Reddit.</div>
+
+            <a href="../projects/mic-volume-guard.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Mic Volume Guard</span>
+              <span class="file-type">Windows</span>
+              <span class="file-size"></span>
+            </a>
+            <div class="file-desc">Windows background watchdog that keeps microphone recording devices at 100% volume. Solves an annoying behavior where apps reset mic levels.</div>
+
+            <a href="../projects/free-games.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">Free Games Pipeline <span class="private-tag">Private</span></span>
+              <span class="file-type">Tampermonkey</span>
+              <span class="file-size">Node.js</span>
+            </a>
+            <div class="file-desc">Multi-platform free game discovery and auto-checkout. Scans Epic, GOG, Steam, and Amazon Prime Gaming. Tampermonkey handles the claiming.</div>
+
+            <a href="../projects/fb-marketplace.html" class="file-row">
+              <span class="file-icon">&#128274;</span>
+              <span class="file-name">FB Marketplace Poster <span class="private-tag">Private</span></span>
+              <span class="file-type">Claude Vision</span>
+              <span class="file-size">Browser Agent</span>
+            </a>
+            <div class="file-desc">Google Photos to Claude vision to browser-agent to Facebook listing. Takes photos of items, generates descriptions and pricing via Claude, posts automatically.</div>
+
+            <a href="../projects/grocery-genius.html" class="file-row">
+              <span class="file-icon">&#128196;</span>
+              <span class="file-name">Grocery Genius</span>
+              <span class="file-type">Kroger API</span>
+              <span class="file-size">Node.js</span>
+            </a>
+            <div class="file-desc">Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.</div>
+          </div>
+        </details>
+
+        <!-- ======================================================== -->
+        <!-- ABOUT / BACKGROUND                                        -->
+        <!-- ======================================================== -->
+        <div class="dialog-box about-dialog">
+          <div class="dialog-title-bar">
+            <span>About This Computer</span>
+          </div>
+          <div class="dialog-content">
+            <h2 class="about-heading">Purpose-built.<br>Shipped <em>daily</em>.</h2>
+            <p class="about-body">
+              Senior PM with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.
+            </p>
+            <p class="about-body">
+              This portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.
+            </p>
+            <p class="about-body about-location">
+              Based in San Francisco.
+            </p>
+            <div class="about-ok-row">
+              <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener" class="btn">OK</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer inside window -->
+        <div class="window-footer">
+          <span>&copy; 2026 Nick Pezarro</span>
+          <span class="footer-links">
+            <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://tuller.medium.com" target="_blank" rel="noopener">Medium</a>
+          </span>
+        </div>
+
+      </div><!-- /window-body -->
+    </div><!-- /window -->
+  </div><!-- /desktop -->
+
+  <!-- ============================================================ -->
+  <!-- TASKBAR                                                       -->
+  <!-- ============================================================ -->
+  <div class="taskbar">
+    <button class="start-btn">
+      <span class="start-icon">&#9654;</span> Start
+    </button>
+    <div class="taskbar-tray">
+      <span class="taskbar-clock" id="taskbar-clock"></span>
+    </div>
+  </div>
+
+<script src="../assets/switcher.js?v=1"></script>
+</body>
+</html>

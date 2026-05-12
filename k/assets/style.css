@@ -1,0 +1,441 @@
+/* ========================================================
+   Variant K — Japanese Minimalism / Zen
+   ======================================================== */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f3ee;
+  --fg: #2c2420;
+  --fg-muted: #8a7e76;
+  --accent: #c23616;
+  --rule: #d6cfc7;
+  --watermark: rgba(44, 36, 32, 0.05);
+
+  --serif: 'Noto Serif Display', 'Georgia', serif;
+  --sans: 'Noto Sans', 'Helvetica Neue', sans-serif;
+  --mono: 'Noto Sans Mono', 'Courier New', monospace;
+}
+
+[data-mode="dark"] {
+  --bg: #1a1816;
+  --fg: #e8e0d4;
+  --fg-muted: #8a7e76;
+  --accent: #c23616;
+  --rule: #33302c;
+  --watermark: rgba(232, 224, 212, 0.04);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Page container --- */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+}
+
+/* --- Dark/Light Toggle --- */
+.mode-toggle {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 100;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg-muted);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  color: var(--fg);
+  border-color: var(--fg-muted);
+}
+
+.mode-toggle-icon {
+  display: none;
+  line-height: 0;
+}
+
+[data-mode="light"] .mode-toggle-moon { display: block; }
+[data-mode="dark"] .mode-toggle-sun { display: block; }
+
+
+/* ========================================================
+   HERO
+   ======================================================== */
+
+.hero {
+  padding-top: 220px;
+  padding-bottom: 100px;
+}
+
+.hero-inner {
+  position: relative;
+}
+
+.hero-name-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.hero-red-line {
+  width: 1px;
+  height: 80px;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 12px;
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero-bio {
+  max-width: 480px;
+  margin-left: auto;
+  margin-top: 56px;
+  text-align: right;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--fg-muted);
+}
+
+.hero-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.hero-link {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+  color: var(--accent);
+}
+
+
+/* ========================================================
+   STATS
+   ======================================================== */
+
+.stats {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  min-width: 100px;
+}
+
+.stat-label {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+/* ========================================================
+   SECTIONS — Shared
+   ======================================================== */
+
+.section-header {
+  position: relative;
+  text-align: right;
+  padding: 80px 0 48px;
+}
+
+.section-watermark {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-family: var(--serif);
+  font-size: 220px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--watermark);
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-title {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--fg-muted);
+  position: relative;
+  z-index: 1;
+}
+
+.section-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+
+/* ========================================================
+   PROJECTS
+   ======================================================== */
+
+.catalogue {
+  padding-bottom: 40px;
+}
+
+.project {
+  display: block;
+  padding: 32px 0 0;
+  margin-bottom: 48px;
+  transition: none;
+}
+
+.project-name {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.project:hover .project-name {
+  color: var(--accent);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--fg-muted);
+  margin-top: 8px;
+  max-width: 680px;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+}
+
+.project-rule {
+  height: 1px;
+  background: var(--rule);
+  margin-top: 32px;
+}
+
+.private-tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  border: 1px solid var(--rule);
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+
+/* ========================================================
+   ABOUT
+   ======================================================== */
+
+.about {
+  padding-bottom: 80px;
+}
+
+.about-content {
+  padding-top: 16px;
+}
+
+.about-body {
+  font-size: 1rem;
+  line-height: 2.0;
+  max-width: 700px;
+  margin-bottom: 32px;
+  color: var(--fg);
+}
+
+.about-body--location {
+  color: var(--fg-muted);
+  font-style: italic;
+  font-family: var(--serif);
+  margin-bottom: 0;
+}
+
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+
+footer {
+  padding: 0 0 60px;
+}
+
+.footer-rule {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 24px;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+
+/* ========================================================
+   SCROLL REVEALS
+   ======================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+}
+
+
+/* ========================================================
+   RESPONSIVE
+   ======================================================== */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding-top: 140px;
+    padding-bottom: 64px;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-red-line {
+    height: 56px;
+    margin-top: 8px;
+  }
+
+  .hero-name-block {
+    gap: 16px;
+  }
+
+  .hero-bio {
+    margin-top: 36px;
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    min-width: 80px;
+  }
+
+  .section-watermark {
+    font-size: 140px;
+  }
+
+  .section-header {
+    padding: 56px 0 32px;
+  }
+
+  .project-name {
+    font-size: 1.15rem;
+  }
+
+  .mode-toggle {
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Pezarro -- Portfolio</title>
+  <meta name="description" content="Nick Pezarro builds tools that make AI agents more useful, more reliable, and safer to operate. 30+ repo Claude Code ecosystem.">
+  <meta property="og:title" content="Nick Pezarro -- Portfolio">
+  <meta property="og:description" content="Building the infrastructure layer for AI agent systems. 30+ repos, 50+ daily autonomous Claude CLI invocations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <h1 class="hero-name">NICK PEZARRO</h1>
+    <p class="hero-bio">I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem.</p>
+    <p class="hero-links">
+      <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a> /
+      <a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a> /
+      <a href="https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad" target="_blank" rel="noopener">Featured Article</a>
+    </p>
+  </section>
+
+  <div class="divider-thick"></div>
+
+  <section class="stats">
+    <p>30+ repositories. 50+ daily CLI invocations. 1yr+ running.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [01] CLAUDE CODE ECOSYSTEM                                    -->
+  <!-- ============================================================ -->
+  <section class="catalogue">
+    <div class="section-label">[01] CLAUDE CODE ECOSYSTEM</div>
+
+    <a href="../projects/autonomous-dev.html" class="project">
+      <div class="project-name">AUTONOMOUS DEV AGENT <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Cron-scheduled system that surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs. Safety guardrails gate on token usage.</div>
+      <div class="project-badges">(Node.js, Claude CLI)</div>
+    </a>
+
+    <a href="../projects/agent-guidance.html" class="project">
+      <div class="project-name">AGENT GUIDANCE <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">The instruction architecture all my agents share. Hierarchical rules, topic-specific guidance, agent profiles with experience logs, and a cross-referenced knowledge base wiki. 30+ guidance pages.</div>
+      <div class="project-badges">(Markdown, Bash)</div>
+    </a>
+
+    <a href="../projects/claudenet.html" class="project">
+      <div class="project-name">CLAUDENET <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Async messaging service for Claude Code instances to exchange implementation knowledge. Express + SQLite backend, web dashboard, bash CLI, autonomous polling worker, and secret-leak scanning.</div>
+      <div class="project-badges">(Express.js, SQLite)</div>
+    </a>
+
+    <a href="../projects/learning-agent.html" class="project">
+      <div class="project-name">LEARNING AGENT (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Hourly system that reviews session activity, detects uncaptured corrections, and propagates them into the guidance system. Every interaction contains implicit lessons; this captures them systematically.</div>
+      <div class="project-badges">(Node.js, Claude CLI)</div>
+    </a>
+
+    <a href="../projects/claude-bakeoff.html" class="project">
+      <div class="project-name">CLAUDE BAKEOFF <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">A/B testing framework for Claude CLI instruction environments. Run the same task under two different instruction sets and compare results with LLM-as-judge evaluation.</div>
+      <div class="project-badges">(Node.js, Bash)</div>
+    </a>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [02] DEVELOPER TOOLS                                          -->
+  <!-- ============================================================ -->
+  <section class="catalogue">
+    <div class="section-label">[02] DEVELOPER TOOLS</div>
+
+    <a href="../projects/browser-agent.html" class="project">
+      <div class="project-name">BROWSER AGENT <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Chrome extension + relay server that gives Claude Code live control of a real browser tab with existing cookies and login state. MV3, 30+ commands, CDP trusted input, screenshots.</div>
+      <div class="project-badges">(Chrome MV3, Node.js)</div>
+    </a>
+
+    <a href="../projects/page-reader.html" class="project">
+      <div class="project-name">PAGE READER <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Headless browser CLI that renders JavaScript-heavy pages and extracts clean text. The fallback every agent uses when default web tools return empty or broken content on SPAs.</div>
+      <div class="project-badges">(Node.js, Puppeteer)</div>
+    </a>
+
+    <a href="../projects/usage-monitor.html" class="project">
+      <div class="project-name">CLAUDE USAGE MONITOR <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Real-time 5-hour and 7-day utilization tracking for Claude Max. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.</div>
+      <div class="project-badges">(Node.js, OAuth)</div>
+    </a>
+
+    <a href="../projects/token-tracker.html" class="project">
+      <div class="project-name">CLAUDE TOKEN TRACKER <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Per-component token usage tracking for Claude Code ecosystems. Breaks down where tokens are being spent across agents and tasks.</div>
+      <div class="project-badges">(Node.js)</div>
+    </a>
+
+    <a href="../projects/tray-notifier.html" class="project">
+      <div class="project-name">CLAUDE TRAY NOTIFIER <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">macOS menu bar app that surfaces notifications from Claude Code CLI sessions. Electron-based with shell installer and auto-update pipeline.</div>
+      <div class="project-badges">(Electron, macOS)</div>
+    </a>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [03] APPLIED AI                                               -->
+  <!-- ============================================================ -->
+  <section class="catalogue">
+    <div class="section-label">[03] APPLIED AI</div>
+
+    <a href="../projects/phone-agent.html" class="project">
+      <div class="project-name">PHONE AGENT (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">AI phone calling system via Google Voice WebRTC interception. Deepgram STT, Claude via Groq for conversation, ElevenLabs TTS. Makes actual phone calls with natural voice.</div>
+      <div class="project-badges">(WebRTC, Deepgram)</div>
+    </a>
+
+    <a href="../projects/botlink.html" class="project">
+      <div class="project-name">BOTLINK (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Professional network for AI agents. Profiles, feeds, discussions. Exploring what it looks like when AI agents have persistent public identities.</div>
+      <div class="project-badges">(Next.js, Prisma)</div>
+    </a>
+
+    <a href="../projects/interview-practice.html" class="project">
+      <div class="project-name">INTERVIEW PRACTICE (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Live audio PM mock interview tool. Claude CLI as interviewer, browser handles TTS/STT, structured scoring rubric evaluates responses across 5 categories.</div>
+      <div class="project-badges">(WebSocket, Speech API)</div>
+    </a>
+
+    <a href="../projects/trading-agent.html" class="project">
+      <div class="project-name">TRADING AGENT (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Autonomous swing trading system with three-loop architecture, 6 strategies, and SEC EDGAR/FRED data integration. Connected to Alpaca paper trading with bracket orders and drawdown circuit breakers.</div>
+      <div class="project-badges">(Python, Alpaca API)</div>
+    </a>
+
+    <a href="../projects/auto-shorts.html" class="project">
+      <div class="project-name">AUTO SHORTS (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">YouTube Shorts generation pipeline. Source cooking videos to clip-worthy moments to cuts to uploads. Smart face-tracking crop, per-clip analytics, and a learning engine that improves over time.</div>
+      <div class="project-badges">(FFmpeg, YouTube API)</div>
+    </a>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [04] AUTOMATION & UTILITIES                                   -->
+  <!-- ============================================================ -->
+  <section class="catalogue">
+    <div class="section-label">[04] AUTOMATION &amp; UTILITIES</div>
+
+    <a href="../projects/reddit-auto-hide.html" class="project">
+      <div class="project-name">REDDIT AUTO-HIDE <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Tampermonkey userscript that auto-hides posts after scrolling past them. Cross-device sync via Reddit's native hide API. Works on old and new Reddit.</div>
+      <div class="project-badges">(Tampermonkey)</div>
+    </a>
+
+    <a href="../projects/mic-volume-guard.html" class="project">
+      <div class="project-name">MIC VOLUME GUARD <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Windows background watchdog that keeps microphone recording devices at 100% volume. Solves an annoying behavior where apps reset mic levels.</div>
+      <div class="project-badges">(Windows)</div>
+    </a>
+
+    <a href="../projects/free-games.html" class="project">
+      <div class="project-name">FREE GAMES PIPELINE (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Multi-platform free game discovery and auto-checkout. Scans Epic, GOG, Steam, and Amazon Prime Gaming. Tampermonkey handles the claiming.</div>
+      <div class="project-badges">(Tampermonkey, Node.js)</div>
+    </a>
+
+    <a href="../projects/fb-marketplace.html" class="project">
+      <div class="project-name">FB MARKETPLACE POSTER (PRIVATE) <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Google Photos to Claude vision to browser-agent to Facebook listing. Takes photos of items, generates descriptions and pricing via Claude, posts automatically.</div>
+      <div class="project-badges">(Claude Vision, Browser Agent)</div>
+    </a>
+
+    <a href="../projects/grocery-genius.html" class="project">
+      <div class="project-name">GROCERY GENIUS <span class="arrow">&rarr;</span></div>
+      <div class="project-desc">Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.</div>
+      <div class="project-badges">(Kroger API, Node.js)</div>
+    </a>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [05] BACKGROUND                                               -->
+  <!-- ============================================================ -->
+  <section class="catalogue">
+    <div class="section-label">[05] BACKGROUND</div>
+
+    <div class="about">
+      <p>Senior PM with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.</p>
+      <p>This portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.</p>
+      <p>Based in San Francisco.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Nick Pezarro -- <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a> / <a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a> / <a href="https://tuller.medium.com" target="_blank" rel="noopener">Medium</a></p>
+  </footer>
+
+<script src="../assets/switcher.js?v=1"></script>
+</body>
+</html>

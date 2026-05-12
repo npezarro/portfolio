@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+<head>
+  <meta charset="UTF-8">
+  <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nick Pezarro — Portfolio</title>
+  <meta name="description" content="Nick Pezarro builds tools that make AI agents more useful, more reliable, and safer to operate. 30+ repo Claude Code ecosystem.">
+  <meta property="og:title" content="Nick Pezarro — Portfolio">
+  <meta property="og:description" content="Building the infrastructure layer for AI agent systems. 30+ repos, 50+ daily autonomous Claude CLI invocations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#1a1816" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f3ee" media="(prefers-color-scheme: light)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+Mono:wght@400&family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Toggle -->
+    <button class="mode-toggle" type="button" aria-label="Toggle color mode" data-mode-toggle>
+      <span class="mode-toggle-icon mode-toggle-sun" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.2"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="3.05" y1="3.05" x2="4.46" y2="4.46" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="11.54" y1="11.54" x2="12.95" y2="12.95" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="11.54" y1="4.46" x2="12.95" y2="3.05" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="3.05" y1="12.95" x2="4.46" y2="11.54" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+      <span class="mode-toggle-icon mode-toggle-moon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 9.5A5.5 5.5 0 1 1 6.5 4a4 4 0 1 0 5.5 5.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </span>
+    </button>
+
+    <main>
+
+      <!-- ====== HERO ====== -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-name-block">
+            <div class="hero-red-line" aria-hidden="true"></div>
+            <h1 class="hero-name">Nick<br>Pezarro</h1>
+          </div>
+          <p class="hero-bio" data-reveal>
+            I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem.
+          </p>
+          <div class="hero-links" data-reveal>
+            <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener" class="hero-link">LinkedIn</a>
+            <a href="https://github.com/npezarro" target="_blank" rel="noopener" class="hero-link">GitHub</a>
+            <a href="https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad" target="_blank" rel="noopener" class="hero-link">Featured Article</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== STATS ====== -->
+      <section class="stats" data-reveal>
+        <div class="section-header">
+          <span class="section-watermark" aria-hidden="true">00</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">Repositories</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Daily CLI invocations</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-num">1yr+</span>
+          <span class="stat-label">Running in production</span>
+        </div>
+      </section>
+
+      <!-- ====== 01 CLAUDE CODE ECOSYSTEM ====== -->
+      <section class="catalogue">
+        <div class="section-header" data-reveal>
+          <span class="section-watermark" aria-hidden="true">01</span>
+          <span class="section-title">Claude Code Ecosystem</span>
+          <span class="section-dot" aria-hidden="true"></span>
+        </div>
+
+        <a href="../projects/autonomous-dev.html" class="project" data-reveal>
+          <h3 class="project-name">Autonomous Dev Agent</h3>
+          <p class="project-desc">Cron-scheduled system that surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs. Safety guardrails gate on token usage.</p>
+          <span class="project-badges"><span class="badge">Node.js</span><span class="badge">Claude CLI</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/agent-guidance.html" class="project" data-reveal>
+          <h3 class="project-name">Agent Guidance</h3>
+          <p class="project-desc">The instruction architecture all my agents share. Hierarchical rules, topic-specific guidance, agent profiles with experience logs, and a cross-referenced knowledge base wiki. 30+ guidance pages.</p>
+          <span class="project-badges"><span class="badge">Markdown</span><span class="badge">Bash</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/claudenet.html" class="project" data-reveal>
+          <h3 class="project-name">ClaudeNet</h3>
+          <p class="project-desc">Async messaging service for Claude Code instances to exchange implementation knowledge. Express + SQLite backend, web dashboard, bash CLI, autonomous polling worker, and secret-leak scanning.</p>
+          <span class="project-badges"><span class="badge">Express.js</span><span class="badge">SQLite</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/learning-agent.html" class="project" data-reveal>
+          <h3 class="project-name">Learning Agent <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Hourly system that reviews session activity, detects uncaptured corrections, and propagates them into the guidance system. Every interaction contains implicit lessons; this captures them systematically.</p>
+          <span class="project-badges"><span class="badge">Node.js</span><span class="badge">Claude CLI</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/claude-bakeoff.html" class="project" data-reveal>
+          <h3 class="project-name">Claude Bakeoff</h3>
+          <p class="project-desc">A/B testing framework for Claude CLI instruction environments. Run the same task under two different instruction sets and compare results with LLM-as-judge evaluation.</p>
+          <span class="project-badges"><span class="badge">Node.js</span><span class="badge">Bash</span></span>
+          <div class="project-rule"></div>
+        </a>
+      </section>
+
+      <!-- ====== 02 DEVELOPER TOOLS ====== -->
+      <section class="catalogue">
+        <div class="section-header" data-reveal>
+          <span class="section-watermark" aria-hidden="true">02</span>
+          <span class="section-title">Developer Tools</span>
+          <span class="section-dot" aria-hidden="true"></span>
+        </div>
+
+        <a href="../projects/browser-agent.html" class="project" data-reveal>
+          <h3 class="project-name">Browser Agent</h3>
+          <p class="project-desc">Chrome extension + relay server that gives Claude Code live control of a real browser tab with existing cookies and login state. MV3, 30+ commands, CDP trusted input, screenshots.</p>
+          <span class="project-badges"><span class="badge">Chrome MV3</span><span class="badge">Node.js</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/page-reader.html" class="project" data-reveal>
+          <h3 class="project-name">Page Reader</h3>
+          <p class="project-desc">Headless browser CLI that renders JavaScript-heavy pages and extracts clean text. The fallback every agent uses when default web tools return empty or broken content on SPAs.</p>
+          <span class="project-badges"><span class="badge">Node.js</span><span class="badge">Puppeteer</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/usage-monitor.html" class="project" data-reveal>
+          <h3 class="project-name">Claude Usage Monitor</h3>
+          <p class="project-desc">Real-time 5-hour and 7-day utilization tracking for Claude Max. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.</p>
+          <span class="project-badges"><span class="badge">Node.js</span><span class="badge">OAuth</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/token-tracker.html" class="project" data-reveal>
+          <h3 class="project-name">Claude Token Tracker</h3>
+          <p class="project-desc">Per-component token usage tracking for Claude Code ecosystems. Breaks down where tokens are being spent across agents and tasks.</p>
+          <span class="project-badges"><span class="badge">Node.js</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/tray-notifier.html" class="project" data-reveal>
+          <h3 class="project-name">Claude Tray Notifier</h3>
+          <p class="project-desc">macOS menu bar app that surfaces notifications from Claude Code CLI sessions. Electron-based with shell installer and auto-update pipeline.</p>
+          <span class="project-badges"><span class="badge">Electron</span><span class="badge">macOS</span></span>
+          <div class="project-rule"></div>
+        </a>
+      </section>
+
+      <!-- ====== 03 APPLIED AI ====== -->
+      <section class="catalogue">
+        <div class="section-header" data-reveal>
+          <span class="section-watermark" aria-hidden="true">03</span>
+          <span class="section-title">Applied AI</span>
+          <span class="section-dot" aria-hidden="true"></span>
+        </div>
+
+        <a href="../projects/phone-agent.html" class="project" data-reveal>
+          <h3 class="project-name">Phone Agent <span class="private-tag">Private</span></h3>
+          <p class="project-desc">AI phone calling system via Google Voice WebRTC interception. Deepgram STT, Claude via Groq for conversation, ElevenLabs TTS. Makes actual phone calls with natural voice.</p>
+          <span class="project-badges"><span class="badge">WebRTC</span><span class="badge">Deepgram</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/botlink.html" class="project" data-reveal>
+          <h3 class="project-name">BotLink <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Professional network for AI agents. Profiles, feeds, discussions. Exploring what it looks like when AI agents have persistent public identities.</p>
+          <span class="project-badges"><span class="badge">Next.js</span><span class="badge">Prisma</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/interview-practice.html" class="project" data-reveal>
+          <h3 class="project-name">Interview Practice <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Live audio PM mock interview tool. Claude CLI as interviewer, browser handles TTS/STT, structured scoring rubric evaluates responses across 5 categories.</p>
+          <span class="project-badges"><span class="badge">WebSocket</span><span class="badge">Speech API</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/trading-agent.html" class="project" data-reveal>
+          <h3 class="project-name">Trading Agent <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Autonomous swing trading system with three-loop architecture, 6 strategies, and SEC EDGAR/FRED data integration. Connected to Alpaca paper trading with bracket orders and drawdown circuit breakers.</p>
+          <span class="project-badges"><span class="badge">Python</span><span class="badge">Alpaca API</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/auto-shorts.html" class="project" data-reveal>
+          <h3 class="project-name">Auto Shorts <span class="private-tag">Private</span></h3>
+          <p class="project-desc">YouTube Shorts generation pipeline. Source cooking videos to clip-worthy moments to cuts to uploads. Smart face-tracking crop, per-clip analytics, and a learning engine that improves over time.</p>
+          <span class="project-badges"><span class="badge">FFmpeg</span><span class="badge">YouTube API</span></span>
+          <div class="project-rule"></div>
+        </a>
+      </section>
+
+      <!-- ====== 04 AUTOMATION & UTILITIES ====== -->
+      <section class="catalogue">
+        <div class="section-header" data-reveal>
+          <span class="section-watermark" aria-hidden="true">04</span>
+          <span class="section-title">Automation &amp; Utilities</span>
+          <span class="section-dot" aria-hidden="true"></span>
+        </div>
+
+        <a href="../projects/reddit-auto-hide.html" class="project" data-reveal>
+          <h3 class="project-name">Reddit Auto-Hide</h3>
+          <p class="project-desc">Tampermonkey userscript that auto-hides posts after scrolling past them. Cross-device sync via Reddit's native hide API. Works on old and new Reddit.</p>
+          <span class="project-badges"><span class="badge">Tampermonkey</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/mic-volume-guard.html" class="project" data-reveal>
+          <h3 class="project-name">Mic Volume Guard</h3>
+          <p class="project-desc">Windows background watchdog that keeps microphone recording devices at 100% volume. Solves an annoying behavior where apps reset mic levels.</p>
+          <span class="project-badges"><span class="badge">Windows</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/free-games.html" class="project" data-reveal>
+          <h3 class="project-name">Free Games Pipeline <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Multi-platform free game discovery and auto-checkout. Scans Epic, GOG, Steam, and Amazon Prime Gaming. Tampermonkey handles the claiming.</p>
+          <span class="project-badges"><span class="badge">Tampermonkey</span><span class="badge">Node.js</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/fb-marketplace.html" class="project" data-reveal>
+          <h3 class="project-name">FB Marketplace Poster <span class="private-tag">Private</span></h3>
+          <p class="project-desc">Google Photos to Claude vision to browser-agent to Facebook listing. Takes photos of items, generates descriptions and pricing via Claude, posts automatically.</p>
+          <span class="project-badges"><span class="badge">Claude Vision</span><span class="badge">Browser Agent</span></span>
+          <div class="project-rule"></div>
+        </a>
+
+        <a href="../projects/grocery-genius.html" class="project" data-reveal>
+          <h3 class="project-name">Grocery Genius</h3>
+          <p class="project-desc">Kroger API integration for grocery price tracking and optimization. Compares prices across stores and finds the best deals.</p>
+          <span class="project-badges"><span class="badge">Kroger API</span><span class="badge">Node.js</span></span>
+          <div class="project-rule"></div>
+        </a>
+      </section>
+
+      <!-- ====== 05 BACKGROUND ====== -->
+      <section class="about">
+        <div class="section-header" data-reveal>
+          <span class="section-watermark" aria-hidden="true">05</span>
+          <span class="section-title">Background</span>
+          <span class="section-dot" aria-hidden="true"></span>
+        </div>
+
+        <div class="about-content">
+          <p class="about-body" data-reveal>
+            Senior PM with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.
+          </p>
+          <p class="about-body" data-reveal>
+            This portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.
+          </p>
+          <p class="about-body about-body--location" data-reveal>
+            Based in San Francisco.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-rule"></div>
+      <p class="footer-text">&copy; 2026 Nick Pezarro</p>
+    </footer>
+
+  </div>
+
+<script src="../assets/switcher.js?v=1"></script>
+</body>
+</html>
