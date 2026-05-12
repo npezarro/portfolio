@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nick Pezarro — Portfolio</title>
+  <meta name="description" content="Nick Pezarro builds tools that make AI agents more useful, more reliable, and safer to operate. 30+ repo Claude Code ecosystem.">
+  <meta property="og:title" content="Nick Pezarro — Portfolio">
+  <meta property="og:description" content="Building the infrastructure layer for AI agent systems. 30+ repos, 50+ daily autonomous Claude CLI invocations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+
+  <!-- CRT scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <!-- NAV -->
+    <nav class="terminal-nav">
+      <a href="#" class="nav-prompt" aria-label="Scroll to top">
+        <span class="prompt-user">npezarro</span><span class="prompt-at">@</span><span class="prompt-host">portfolio</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span>
+      </a>
+      <div class="nav-links">
+        <a href="#ecosystem">./ecosystem</a>
+        <a href="#tools">./tools</a>
+        <a href="#applied">./applied-ai</a>
+        <a href="#automation">./automation</a>
+        <a href="#about">./about</a>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <h1 class="hero-name">Nick Pezarro</h1>
+        <p class="hero-bio">I build tools that make AI agents more useful, more reliable, and safer to operate.</p>
+        <div class="hero-meta">
+          <span class="hero-stats">30+ repos | 50+ invocations/day | 1yr+ uptime</span>
+          <div class="hero-links">
+            <a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">[LinkedIn]</a>
+            <a href="https://github.com/npezarro" target="_blank" rel="noopener">[GitHub]</a>
+            <a href="https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad" target="_blank" rel="noopener" class="hero-link--featured">[Featured Article]</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 — CLAUDE CODE ECOSYSTEM -->
+      <section class="catalogue" id="ecosystem">
+        <h2 class="section-cmd">$ ls ./claude-code-ecosystem</h2>
+        <div class="project-list">
+          <a href="../projects/autonomous-dev.html" class="project-row">
+            <span class="project-name">Autonomous Dev Agent</span>
+            <span class="project-desc">Cron-scheduled system that surveys codebases for highest-impact work, creates branches, implements features</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span> <span class="tag">[Claude CLI]</span></span>
+          </a>
+          <a href="../projects/agent-guidance.html" class="project-row">
+            <span class="project-name">Agent Guidance</span>
+            <span class="project-desc">Hierarchical instruction architecture all agents share. Rules, guidance, profiles, experience logs, wiki</span>
+            <span class="project-tags"><span class="tag">[Markdown]</span> <span class="tag">[Bash]</span></span>
+          </a>
+          <a href="../projects/claudenet.html" class="project-row">
+            <span class="project-name">ClaudeNet</span>
+            <span class="project-desc">Async messaging service for Claude Code instances to exchange implementation knowledge</span>
+            <span class="project-tags"><span class="tag">[Express.js]</span> <span class="tag">[SQLite]</span></span>
+          </a>
+          <div class="project-row project-row--private">
+            <span class="project-name">Learning Agent <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Hourly system that reviews session activity, detects uncaptured corrections, propagates to guidance</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span> <span class="tag">[Claude CLI]</span></span>
+          </div>
+          <a href="../projects/claude-bakeoff.html" class="project-row">
+            <span class="project-name">Claude Bakeoff</span>
+            <span class="project-desc">A/B testing framework for Claude CLI instruction environments with LLM-as-judge evaluation</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span> <span class="tag">[Bash]</span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 02 — DEVELOPER TOOLS -->
+      <section class="catalogue" id="tools">
+        <h2 class="section-cmd">$ ls ./developer-tools</h2>
+        <div class="project-list">
+          <a href="../projects/browser-agent.html" class="project-row">
+            <span class="project-name">Browser Agent</span>
+            <span class="project-desc">Chrome extension + relay giving Claude Code live control of a real browser tab with cookies</span>
+            <span class="project-tags"><span class="tag">[Chrome MV3]</span> <span class="tag">[Node.js]</span></span>
+          </a>
+          <a href="../projects/page-reader.html" class="project-row">
+            <span class="project-name">Page Reader</span>
+            <span class="project-desc">Headless browser CLI that renders JS-heavy pages and extracts clean text for agents</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span> <span class="tag">[Puppeteer]</span></span>
+          </a>
+          <a href="../projects/usage-monitor.html" class="project-row">
+            <span class="project-name">Claude Usage Monitor</span>
+            <span class="project-desc">Real-time 5hr/7day utilization tracking for Claude Max. Powers pre-flight usage gates</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span> <span class="tag">[OAuth]</span></span>
+          </a>
+          <a href="../projects/token-tracker.html" class="project-row">
+            <span class="project-name">Claude Token Tracker</span>
+            <span class="project-desc">Per-component token usage tracking. Breaks down where tokens are spent across agents/tasks</span>
+            <span class="project-tags"><span class="tag">[Node.js]</span></span>
+          </a>
+          <a href="../projects/tray-notifier.html" class="project-row">
+            <span class="project-name">Claude Tray Notifier</span>
+            <span class="project-desc">macOS menu bar app that surfaces notifications from Claude Code CLI sessions</span>
+            <span class="project-tags"><span class="tag">[Electron]</span> <span class="tag">[macOS]</span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 03 — APPLIED AI -->
+      <section class="catalogue" id="applied">
+        <h2 class="section-cmd">$ ls ./applied-ai</h2>
+        <div class="project-list">
+          <div class="project-row project-row--private">
+            <span class="project-name">Phone Agent <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">AI phone calling via Google Voice WebRTC. Deepgram STT, Claude via Groq, ElevenLabs TTS</span>
+            <span class="project-tags"><span class="tag">[WebRTC]</span> <span class="tag">[Deepgram]</span></span>
+          </div>
+          <div class="project-row project-row--private">
+            <span class="project-name">BotLink <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Professional network for AI agents. Profiles, feeds, discussions, persistent public identities</span>
+            <span class="project-tags"><span class="tag">[Next.js]</span> <span class="tag">[Prisma]</span></span>
+          </div>
+          <div class="project-row project-row--private">
+            <span class="project-name">Interview Practice <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Live audio PM mock interview tool. Claude CLI interviewer, browser TTS/STT, scoring rubric</span>
+            <span class="project-tags"><span class="tag">[WebSocket]</span> <span class="tag">[Speech API]</span></span>
+          </div>
+          <div class="project-row project-row--private">
+            <span class="project-name">Trading Agent <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Autonomous swing trading, three-loop architecture, 6 strategies, SEC EDGAR/FRED, Alpaca paper</span>
+            <span class="project-tags"><span class="tag">[Python]</span> <span class="tag">[Alpaca API]</span></span>
+          </div>
+          <div class="project-row project-row--private">
+            <span class="project-name">Auto Shorts <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">YouTube Shorts generation pipeline. Source videos to clips to uploads, smart face-tracking crop</span>
+            <span class="project-tags"><span class="tag">[FFmpeg]</span> <span class="tag">[YouTube API]</span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — AUTOMATION & UTILITIES -->
+      <section class="catalogue" id="automation">
+        <h2 class="section-cmd">$ ls ./automation</h2>
+        <div class="project-list">
+          <a href="../projects/reddit-auto-hide.html" class="project-row">
+            <span class="project-name">Reddit Auto-Hide</span>
+            <span class="project-desc">Tampermonkey userscript that auto-hides posts after scrolling. Cross-device sync via Reddit API</span>
+            <span class="project-tags"><span class="tag">[Tampermonkey]</span></span>
+          </a>
+          <a href="../projects/mic-volume-guard.html" class="project-row">
+            <span class="project-name">Mic Volume Guard</span>
+            <span class="project-desc">Windows background watchdog keeping mic recording devices at 100% volume</span>
+            <span class="project-tags"><span class="tag">[Windows]</span></span>
+          </a>
+          <div class="project-row project-row--private">
+            <span class="project-name">Free Games Pipeline <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Multi-platform free game discovery and auto-checkout. Epic, GOG, Steam, Amazon Prime Gaming</span>
+            <span class="project-tags"><span class="tag">[Tampermonkey]</span> <span class="tag">[Node.js]</span></span>
+          </div>
+          <div class="project-row project-row--private">
+            <span class="project-name">FB Marketplace Poster <span class="pvt">(pvt)</span></span>
+            <span class="project-desc">Google Photos to Claude vision to browser-agent to Facebook listing. Auto descriptions + pricing</span>
+            <span class="project-tags"><span class="tag">[Claude Vision]</span> <span class="tag">[Browser Agent]</span></span>
+          </div>
+          <a href="../projects/grocery-genius.html" class="project-row">
+            <span class="project-name">Grocery Genius</span>
+            <span class="project-desc">Kroger API integration for grocery price tracking and optimization across stores</span>
+            <span class="project-tags"><span class="tag">[Kroger API]</span> <span class="tag">[Node.js]</span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT / BACKGROUND -->
+      <section class="about" id="about">
+        <h2 class="section-cmd">$ cat ./background.txt</h2>
+        <div class="about-output">
+          <p class="about-body">Senior PM with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and served as one of two primary prompt engineers on Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.</p>
+          <p class="about-body">This portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.</p>
+          <p class="about-body about-body--location">// Based in San Francisco.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <span class="footer-exit">Process exited with code 0</span>
+    </footer>
+
+  </div>
+<script src="../assets/switcher.js?v=1"></script>
+</body>
+</html>
