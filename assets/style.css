@@ -536,6 +536,18 @@ img { max-width: 100%; display: block; }
   max-width: 260px;
 }
 
+a.patent {
+  transition: color 0.2s;
+}
+
+a.patent:hover .patent-id {
+  color: var(--fg);
+}
+
+a.patent:hover .patent-title {
+  color: var(--accent);
+}
+
 /* === ABOUT ====================================================== */
 .about {
   padding: clamp(48px, 6vh, 80px) 0;
