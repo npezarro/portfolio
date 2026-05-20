@@ -1,6 +1,101 @@
 /* ==========================================================================
    Project detail page styles (extends style.css)
+   Bridges old variable names to the Variant Q ("Magazine Spread") design.
    ========================================================================== */
+
+/* ----- Variable bridge: map to Variant Q tokens ---------------------- */
+:root {
+  --text-primary: var(--fg);
+  --text-secondary: var(--fg-mid);
+  --text-tertiary: var(--fg-dim);
+  --accent-cool: #5a7068;
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-mast);
+  --bg-tertiary: #eae6dd;
+  --border-light: var(--rule);
+  --border-medium: var(--rule-strong);
+  --r-md: 8px;
+  --r-sm: 6px;
+  --t-fast: 0.2s ease;
+  --mono: var(--ff-mono);
+  --font-display: var(--ff-display);
+}
+[data-mode="dark"] {
+  --accent-cool: #7d9a8f;
+  --bg-tertiary: #1f1c18;
+}
+
+/* ----- Page container (project pages use .container) ------------------ */
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+/* ----- Sticky nav chrome --------------------------------------------- */
+.sticky-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  transition: background 0.35s ease;
+}
+.unified-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.nav-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-mark:hover { color: var(--accent); }
+.nav-glyph { color: var(--accent); }
+.nav-text { text-transform: uppercase; letter-spacing: 0.14em; }
+.unified-actions { display: flex; align-items: center; gap: 12px; }
+
+/* ----- Tech badge ---------------------------------------------------- */
+.project-badge {
+  display: inline-block;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+/* ----- Footer (project page variant) --------------------------------- */
+.footer-copy {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+.footer-links li a {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  transition: color 0.2s;
+}
+.footer-links li a:hover { color: var(--accent); }
 
 /* ----- Back link ----------------------------------------------------- */
 .back-link {
