@@ -340,8 +340,25 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.featured .project-thumb {
-  max-height: 280px;
+/* --- Featured Two-Column (text + image) ------------------------- */
+.featured--two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.featured--two-col .project-thumb {
+  max-height: none;
+  height: 240px;
+  object-position: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 680px) {
+  .featured--two-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Featured Project ------------------------------------------- */

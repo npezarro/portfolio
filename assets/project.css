@@ -177,6 +177,33 @@
 .project-hero-link svg { transition: transform var(--t-fast); }
 .project-hero-link:hover svg { transform: translate(2px, -2px); }
 
+/* ----- Two-column hero + screenshot ---------------------------------- */
+.project-hero--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 12px 0 48px;
+}
+
+.project-hero--split .project-hero-screenshot {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  margin-top: 20px;
+}
+
+.project-hero--split .project-hero-screenshot img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .project-hero--split {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ----- Visual mockup container --------------------------------------- */
 .project-visual {
   margin: 0 0 48px;

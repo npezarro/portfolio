@@ -793,8 +793,8 @@ function generatePage(p) {
   <meta name="description" content="${p.desc.slice(0, 160).replace(/"/g, '&quot;')}">
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="../assets/style.css?v=1">
-  <link rel="stylesheet" href="../assets/project.css?v=1">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <link rel="stylesheet" href="../assets/project.css?v=2">
   <script defer src="../assets/site.js?v=1"></script>
 </head>
 <body>
@@ -828,7 +828,20 @@ function generatePage(p) {
         All Projects
       </a>
 
-      <section class="project-hero">
+      ${p.visual === 'screenshot' ? `<section class="project-hero project-hero--split">
+        <div>
+          <span class="project-hero-kicker">${p.catNum} &middot; ${p.category}</span>
+          <h1 class="project-hero-title">${p.name}</h1>
+          <p class="project-hero-subtitle">${p.desc}</p>
+          <div class="project-hero-badges">
+              ${badges}
+          </div>
+          ${githubLink}
+        </div>
+        <div class="project-hero-screenshot">
+          <img src="../assets/screenshots/${p.screenshotFile}" alt="${p.name} screenshot">
+        </div>
+      </section>` : `<section class="project-hero">
         <span class="project-hero-kicker">${p.catNum} &middot; ${p.category}</span>
         <h1 class="project-hero-title">${p.name}</h1>
         <p class="project-hero-subtitle">${p.desc}</p>
@@ -838,7 +851,7 @@ function generatePage(p) {
         ${githubLink}
       </section>
 
-      ${visualHtml}
+      ${visualHtml}`}
 
       <section class="project-features">
         <h3>Key Features</h3>
