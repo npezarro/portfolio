@@ -147,7 +147,6 @@ const projects = [
     mono: 'FT',
     badges: ['Next.js', 'NextAuth', 'Prisma'],
     github: null,
-    live: '/finance',
     desc: 'Personal finance dashboard that aggregates Plaid and Empower data into one view: budgets, spending analysis, and investment performance. Single-user, gated behind Google OAuth (allowed-email only).',
     features: [
       'Aggregates Plaid (banking) and Empower (investments)',
