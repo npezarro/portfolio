@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Claude Usage Monitor — Nick Pezarro</title>
-  <meta name="description" content="Queries the Claude Max OAuth usage endpoint for real-time 5-hour and 7-day utilization percentages. Powers the pre-flight usage gates that prevent autonomous ag">
+  <title>Foodie — Nick Pezarro</title>
+  <meta name="description" content="Public AI restaurant and food recommendation app. Opinionated recs (restaurants, cafes, boba, matcha) backed by real ratings from Google, Yelp, Reddit, and edit">
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="../assets/style.css?v=3">
@@ -44,54 +44,53 @@
       </a>
 
       <section class="project-hero">
-        <span class="project-hero-kicker">03 &middot; Developer Tools</span>
-        <h1 class="project-hero-title">Claude Usage Monitor</h1>
-        <p class="project-hero-subtitle">Queries the Claude Max OAuth usage endpoint for real-time 5-hour and 7-day utilization percentages. Powers the pre-flight usage gates that prevent autonomous agents from running when usage is high.</p>
+        <span class="project-hero-kicker">01 &middot; Live Products</span>
+        <h1 class="project-hero-title">Foodie</h1>
+        <p class="project-hero-subtitle">Public AI restaurant and food recommendation app. Opinionated recs (restaurants, cafes, boba, matcha) backed by real ratings from Google, Yelp, Reddit, and editorial sources, filtered by vibe, price, dietary needs, and distance. Same architecture as Shopper: an async job queue routes queries to a Docker-containerized Claude CLI, isolated on an alt account for untrusted public input.</p>
         <div class="project-hero-badges">
-            <span class="project-badge">Node.js</span>
-            <span class="project-badge">OAuth</span>
+            <span class="project-badge">Next.js</span>
+            <span class="project-badge">Docker</span>
+            <span class="project-badge">SQLite</span>
+            <span class="project-badge">Claude CLI</span>
         </div>
-        <a href="https://github.com/npezarro/claude-usage-monitor" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/foodie" target="_blank" rel="noopener" class="project-hero-link">Visit Live Site <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </section>
 
       
       <div class="project-visual">
-        <div class="mockup-terminal">
-          <div class="mockup-terminal-bar">
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-title">check-usage.sh — output</div>
+        <div class="mockup-browser">
+          <div class="mockup-browser-bar">
+            <div class="mockup-browser-dots"><span></span><span></span><span></span></div>
+            <div class="mockup-browser-url">foodie — /foodie</div>
           </div>
-          <div class="mockup-terminal-body"><pre style="margin:0;white-space:pre-wrap;font-family:inherit;"><span class="prompt">$</span> <span class="cmd">check-usage.sh --gate</span>
-<span class="info">5h: 22.0%</span> (resets May 12 4:00pm PT)
-<span class="info">7d: 41.0%</span> (resets May 17 12:00pm PT)
-Status: <span class="success">OK</span>
-GATE: Usage at 41.0% (threshold 75%). <span class="success">OK to proceed.</span>
-
-<span class="prompt">$</span> <span class="cmd">check-usage.sh --gate</span>  <span class="dim"># later that day...</span>
-<span class="warning">5h: 78.0%</span> (resets May 12 9:00pm PT)
-<span class="info">7d: 55.0%</span> (resets May 17 12:00pm PT)
-Status: <span class="warning">HIGH</span>
-GATE: Usage at 78.0% (threshold 75%). <span class="warning">BLOCKED.</span></pre></div>
+          <div class="mockup-browser-body"><div style="padding:24px;text-align:center;">
+      <div style="font-size:24px;font-weight:600;color:var(--text-primary);margin-bottom:6px;">Foodie</div>
+      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:18px;">Opinionated food recs. No filler.</div>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:340px;margin:0 auto 18px;text-align:left;">
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Restaurants, cafes, boba, and matcha spots</div>
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Real ratings from Google, Yelp, Reddit &amp; editorial</div>
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Filtered by vibe, price, dietary needs &amp; distance</div>
+      </div>
+      <div style="display:inline-block;font-size:12px;font-weight:600;color:white;background:linear-gradient(135deg,#f97316,#ef4444);padding:9px 18px;border-radius:8px;">Sign in with Google</div>
+    </div></div>
         </div>
       </div>
 
       <section class="project-features">
         <h3>Key Features</h3>
         <ul class="feature-list">
-          <li>Real-time 5-hour and 7-day utilization tracking</li>
-          <li>5-minute result caching to avoid rate limits</li>
-          <li>Pre-flight gate for autonomous agent spawning</li>
-          <li>Threshold-based blocking (75% warning, halt)</li>
-          <li>Discord integration for usage alerts</li>
-          <li>Cron-compatible output format</li>
+          <li>Opinionated recommendations, no filler</li>
+          <li>Aggregates Google, Yelp, Reddit, and editorial ratings</li>
+          <li>Filters: vibe, price, dietary needs, distance</li>
+          <li>Async job queue to a Docker-containerized Claude CLI</li>
+          <li>Google OAuth via centralized auth-proxy</li>
+          <li>Public-app isolation on a dedicated alt account</li>
         </ul>
       </section>
 
       <nav class="project-nav">
-        <a href="cli-orchestrator.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
-        <a href="token-tracker.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="shopper.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
+        <a href="travel.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </nav>
     </main>
 

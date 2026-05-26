@@ -77,6 +77,40 @@ const projects = [
     screenshotFile: 'shopper-result.png',
     screenshotUrl: 'shopper — Buying Guide Result',
     prev: 'claudenet',
+    next: 'foodie',
+  },
+  {
+    slug: 'foodie',
+    name: 'Foodie',
+    category: 'Live Products',
+    catNum: '01',
+    hue: 25,
+    mono: 'FD',
+    badges: ['Next.js', 'Docker', 'SQLite', 'Claude CLI'],
+    github: null,
+    live: '/foodie',
+    desc: 'Public AI restaurant and food recommendation app. Opinionated recs (restaurants, cafes, boba, matcha) backed by real ratings from Google, Yelp, Reddit, and editorial sources, filtered by vibe, price, dietary needs, and distance. Same architecture as Shopper: an async job queue routes queries to a Docker-containerized Claude CLI, isolated on an alt account for untrusted public input.',
+    features: [
+      'Opinionated recommendations, no filler',
+      'Aggregates Google, Yelp, Reddit, and editorial ratings',
+      'Filters: vibe, price, dietary needs, distance',
+      'Async job queue to a Docker-containerized Claude CLI',
+      'Google OAuth via centralized auth-proxy',
+      'Public-app isolation on a dedicated alt account',
+    ],
+    visual: 'browser',
+    browserUrl: 'foodie — /foodie',
+    browserContent: `<div style="padding:24px;text-align:center;">
+      <div style="font-size:24px;font-weight:600;color:var(--text-primary);margin-bottom:6px;">Foodie</div>
+      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:18px;">Opinionated food recs. No filler.</div>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:340px;margin:0 auto 18px;text-align:left;">
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Restaurants, cafes, boba, and matcha spots</div>
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Real ratings from Google, Yelp, Reddit &amp; editorial</div>
+        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Filtered by vibe, price, dietary needs &amp; distance</div>
+      </div>
+      <div style="display:inline-block;font-size:12px;font-weight:600;color:white;background:linear-gradient(135deg,#f97316,#ef4444);padding:9px 18px;border-radius:8px;">Sign in with Google</div>
+    </div>`,
+    prev: 'shopper',
     next: 'travel',
   },
   {
@@ -88,6 +122,7 @@ const projects = [
     mono: 'TA',
     badges: ['Next.js', 'MCP', 'Docker', 'Claude CLI'],
     github: null,
+    live: '/travel',
     desc: 'Award travel optimizer. Searches real-time award availability across airline programs via MCP integrations, cross-references your card portfolio transfer partners, calculates cents-per-point valuations, and finds the best points redemption with hotel credit stacking.',
     features: [
       'Real-time award availability via AwardTravelFinder MCP',
@@ -100,7 +135,36 @@ const projects = [
     visual: 'screenshot',
     screenshotFile: 'travel-result.png',
     screenshotUrl: 'travel — Award Search Result',
-    prev: 'shopper',
+    prev: 'foodie',
+    next: 'finance',
+  },
+  {
+    slug: 'finance',
+    name: 'Finance Tracker',
+    category: 'Live Products',
+    catNum: '01',
+    hue: 200,
+    mono: 'FT',
+    badges: ['Next.js', 'NextAuth', 'Prisma'],
+    github: null,
+    live: '/finance',
+    desc: 'Personal finance dashboard that aggregates Plaid and Empower data into one view: budgets, spending analysis, and investment performance. Single-user, gated behind Google OAuth (allowed-email only).',
+    features: [
+      'Aggregates Plaid (banking) and Empower (investments)',
+      'Budgets and category spending analysis',
+      'Investment performance tracking',
+      'Live data with imported-data fallback',
+      'Single-user: NextAuth + Google OAuth, allowed-email gated',
+    ],
+    visual: 'arch',
+    archData: {
+      rows: [
+        { boxes: [{ text: 'Plaid (Banking)', cls: 'cool' }, { text: 'Empower (Investments)', cls: 'cool' }], label: 'Data Sources' },
+        { boxes: [{ text: 'Next.js API + Prisma', cls: 'accent' }], label: 'Aggregation Layer' },
+        { boxes: [{ text: 'Budgets', cls: '' }, { text: 'Spending Analysis', cls: '' }, { text: 'Investment Performance', cls: '' }], label: 'Dashboard (Google OAuth gated)' },
+      ],
+    },
+    prev: 'travel',
     next: 'autonomous-dev',
   },
   // ---- 02: Claude Code Ecosystem ----
@@ -136,7 +200,7 @@ const projects = [
 <span class="dim">[2026-05-12 08:12:44]</span> Staging PR for review...
 <span class="dim">[2026-05-12 08:12:45]</span> <span class="info">→ PR #142 created, posted to Discord</span>
 <span class="dim">[2026-05-12 08:12:45]</span> Usage: 5h 34% | 7d 28%`,
-    prev: 'travel',
+    prev: 'finance',
     next: 'agent-guidance',
   },
   {
@@ -278,6 +342,38 @@ Active Users: 1,247
 Revenue Today: $34,891
 ...</span>`,
     prev: 'browser-agent',
+    next: 'cli-orchestrator',
+  },
+  {
+    slug: 'cli-orchestrator',
+    name: 'CLI Orchestrator',
+    category: 'Developer Tools',
+    catNum: '03',
+    hue: 280,
+    mono: 'CO',
+    badges: ['Node.js', 'Zero-dep'],
+    github: 'https://github.com/npezarro/cli-orchestrator',
+    desc: 'Multi-model orchestration layer that dispatches a single prompt to Claude, Gemini, or Codex CLIs, or fans out to all of them in parallel, through a uniform API. Zero dependencies, uses execFile rather than a shell so there is no injection surface. Powers cheaper/free-model offload and cross-model shadow runs for the trading and autonomous-dev systems.',
+    features: [
+      'Uniform API across Claude, Gemini, and Codex CLIs',
+      'Parallel fan-out: dispatchAll([providers], prompt)',
+      'Sync and async dispatch modes',
+      'No shell injection surface (execFile, not shell)',
+      'Zero runtime dependencies',
+      'Easy to extend via src/providers.js',
+    ],
+    visual: 'terminal',
+    terminalTitle: 'orch — multi-model fan-out',
+    terminalContent: `<span class="prompt">$</span> <span class="cmd">orch --all "Summarize this error in one line"</span>
+
+<span class="dim">Dispatching to 3 providers in parallel...</span>
+
+<span class="output">[claude]  Null reference: config.db was undefined at startup.
+[gemini]  The DB config object is missing, causing a crash on boot.
+[codex]   App crashed because config.db is not set before use.</span>
+
+<span class="success">3/3 providers responded in 4.2s</span>`,
+    prev: 'page-reader',
     next: 'usage-monitor',
   },
   {
@@ -311,7 +407,7 @@ GATE: Usage at 41.0% (threshold 75%). <span class="success">OK to proceed.</span
 <span class="info">7d: 55.0%</span> (resets May 17 12:00pm PT)
 Status: <span class="warning">HIGH</span>
 GATE: Usage at 78.0% (threshold 75%). <span class="warning">BLOCKED.</span>`,
-    prev: 'page-reader',
+    prev: 'cli-orchestrator',
     next: 'token-tracker',
   },
   {
