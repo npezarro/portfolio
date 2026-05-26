@@ -636,8 +636,12 @@ GATE: Usage at 78.0% (threshold 75%). <span class="warning">BLOCKED.</span>`,
       'Stale job sweeper for pipeline hygiene',
       'Weekly learnings email digest',
     ],
-    visual: 'flow',
-    flowSteps: ['Source Video', 'Clip Detection', 'Face-Track Crop', 'Upload', 'Analyze & Learn'],
+    visual: 'screenshot',
+    screenshotFile: 'auto-shorts-dashboard.png',
+    screenshotUrl: 'Auto Shorts — Dashboard',
+    gallery: [
+      { file: 'auto-shorts-library.png', label: 'Auto Shorts — Video Library' },
+    ],
     prev: 'trading-agent',
     next: 'reddit-auto-hide',
   },
@@ -884,6 +888,22 @@ function generatePage(p) {
   const features = p.features.map(f => `          <li>${f}</li>`).join('\n');
   const badges = p.badges.map(b => `<span class="project-badge">${b}</span>`).join('\n            ');
 
+  const galleryHtml = (p.gallery && p.gallery.length) ? `
+      <section class="project-features">
+        <h3>Interface</h3>
+        <div class="project-gallery">
+          ${p.gallery.map(g => `<div class="mockup-browser">
+            <div class="mockup-browser-bar">
+              <div class="mockup-browser-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-browser-url">${g.label || ''}</div>
+            </div>
+            <div class="mockup-browser-body" style="padding:0;overflow:hidden;">
+              <img src="../assets/screenshots/${g.file}" alt="${g.label || p.name} screenshot" style="width:100%;display:block;">
+            </div>
+          </div>`).join('\n          ')}
+        </div>
+      </section>` : '';
+
   return `<!DOCTYPE html>
 <html lang="en" data-mode="dark">
 <head>
@@ -895,7 +915,7 @@ function generatePage(p) {
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="../assets/style.css?v=3">
-  <link rel="stylesheet" href="../assets/project.css?v=2">
+  <link rel="stylesheet" href="../assets/project.css?v=3">
   <script defer src="../assets/site.js?v=1"></script>
 </head>
 <body>
@@ -960,7 +980,7 @@ function generatePage(p) {
 ${features}
         </ul>
       </section>
-
+${galleryHtml}
       <nav class="project-nav">
         ${prevLink}
         ${nextLink}

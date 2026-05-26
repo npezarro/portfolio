@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="../assets/style.css?v=3">
-  <link rel="stylesheet" href="../assets/project.css?v=2">
+  <link rel="stylesheet" href="../assets/project.css?v=3">
   <script defer src="../assets/site.js?v=1"></script>
 </head>
 <body>
@@ -43,29 +43,23 @@
         All Projects
       </a>
 
-      <section class="project-hero">
-        <span class="project-hero-kicker">04 &middot; Applied AI</span>
-        <h1 class="project-hero-title">Auto Shorts</h1>
-        <p class="project-hero-subtitle">YouTube Shorts generation pipeline. Takes source cooking videos, identifies clip-worthy moments, generates cuts with smart face-tracking crop, and uploads. Per-clip analytics and a learning engine that improves over time.</p>
-        <div class="project-hero-badges">
-            <span class="project-badge">FFmpeg</span>
+      <section class="project-hero project-hero--split">
+        <div>
+          <span class="project-hero-kicker">04 &middot; Applied AI</span>
+          <h1 class="project-hero-title">Auto Shorts</h1>
+          <p class="project-hero-subtitle">YouTube Shorts generation pipeline. Takes source cooking videos, identifies clip-worthy moments, generates cuts with smart face-tracking crop, and uploads. Per-clip analytics and a learning engine that improves over time.</p>
+          <div class="project-hero-badges">
+              <span class="project-badge">FFmpeg</span>
             <span class="project-badge">YouTube API</span>
             <span class="project-badge">MediaPipe</span>
             <span class="project-badge">Claude Vision</span>
+          </div>
+          <span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>
         </div>
-        <span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>
+        <div class="project-hero-screenshot">
+          <img src="../assets/screenshots/auto-shorts-dashboard.png" alt="Auto Shorts screenshot">
+        </div>
       </section>
-
-      
-      <div class="project-visual">
-        <div class="mockup-flow">
-          <div class="flow-steps"><div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-label">Source Video</div></div><div class="flow-connector"></div>
-            <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-label">Clip Detection</div></div><div class="flow-connector"></div>
-            <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-label">Face-Track Crop</div></div><div class="flow-connector"></div>
-            <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-label">Upload</div></div><div class="flow-connector"></div>
-            <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-label">Analyze & Learn</div></div></div>
-        </div>
-      </div>
 
       <section class="project-features">
         <h3>Key Features</h3>
@@ -79,6 +73,20 @@
         </ul>
       </section>
 
+      <section class="project-features">
+        <h3>Interface</h3>
+        <div class="project-gallery">
+          <div class="mockup-browser">
+            <div class="mockup-browser-bar">
+              <div class="mockup-browser-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-browser-url">Auto Shorts — Video Library</div>
+            </div>
+            <div class="mockup-browser-body" style="padding:0;overflow:hidden;">
+              <img src="../assets/screenshots/auto-shorts-library.png" alt="Auto Shorts — Video Library screenshot" style="width:100%;display:block;">
+            </div>
+          </div>
+        </div>
+      </section>
       <nav class="project-nav">
         <a href="trading-agent.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
         <a href="reddit-auto-hide.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
