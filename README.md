@@ -14,7 +14,7 @@ Resume available upon request.
 
 Apps I run in production and use regularly. Shopper and Foodie are open to anyone; the rest are access-gated (QuickClaude by key, Finance and Travel to my own account).
 
-### [QuickClaude](https://pezant.ca/portfolio/projects/quick-claude.html) — *access-gated (key-based)*
+### [QuickClaude](https://www.youtube.com/watch?v=X8jcoXETMjU) — *access-gated (key-based, demo video)*
 One-prompt Claude Code environment bootstrap. A web service where a containerized guide Claude (Opus) walks another Claude Code instance through full environment setup via bidirectional conversation. Express + Docker backend with key-based auth, usage limits, and Discord integration. Built to onboard others into a working Claude Code setup in a single prompt.
 
 ### [Shopper](https://pezant.ca/shopper) — *fully public*
