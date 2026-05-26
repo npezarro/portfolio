@@ -1,12 +1,27 @@
 # Nick Pezarro
 
-I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem.
+I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 30+ repository ecosystem. There's a more visual version of this portfolio at [pezant.ca/portfolio](https://pezant.ca/portfolio).
 
 The projects below range from production infrastructure I run daily to smaller utilities I built to solve specific problems. They share a common thread: each one started because I hit a real limitation and decided to fix it rather than work around it.
 
 **Featured:** [I Built a Messaging System for Claude Code Instances. Here's Why.](https://tuller.medium.com/i-built-a-messaging-system-for-claude-code-instances-heres-why-a82bd11ad0ad) — a walkthrough of the ecosystem and what I've learned running it.
 
-And here's my [resume](https://github.com/npezarro/portfolio/blob/master/Nicholas%20Pezarro%20Resume.pdf).
+Resume available upon request.
+
+---
+
+## Live Products
+
+Apps I run in production and use regularly. Shopper is fully public; the others are live but gated to my own account.
+
+### [Shopper](https://pezant.ca/shopper) — *fully public*
+Public AI buying assistant. Runs skeptic-first product research through a Docker-containerized Claude CLI, producing detailed buying guides with price optimization, cashback stacking, shareable public links, and follow-up Q&A via conversational threading. Next.js + Docker + SQLite.
+
+### [Finance Tracker](https://pezant.ca/finance) — *live*
+Personal finance dashboard aggregating Plaid and Empower data: budgets, spending analysis, and investment performance in one view. Next.js with NextAuth (single-user, Google OAuth gated).
+
+### [Travel Assistant](https://pezant.ca/travel) — *live*
+Award travel optimizer. Searches real-time award availability, cross-references card-portfolio transfer partners, and finds the best points redemptions with hotel credit stacking. Next.js + MCP + Docker.
 
 ---
 

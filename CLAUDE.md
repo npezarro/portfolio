@@ -35,4 +35,4 @@ See privateContext for SSH credentials and deploy commands.
 Pre-commit hook blocks the domain name and VM IP in committed code (public repo). Don't put identifying URLs in committed files.
 
 ## Open Items
-- Resume PDF is in the repo but not linked from the portfolio page
+- None. (Resume PDF was removed and scrubbed from git history — it contained a personal email. README now says "available upon request".)
