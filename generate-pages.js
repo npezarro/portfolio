@@ -64,6 +64,7 @@ const projects = [
     badges: ['Next.js', 'Docker', 'SQLite', 'Claude CLI'],
     github: null,
     live: '/shopper',
+    sample: '/shopper/share/b641d452ab0cad4409bb688b6a0d2169',
     desc: 'Public AI buying assistant. Runs skeptic-first product research through a Docker-containerized Claude CLI, producing detailed buying guides with price optimization, cashback stacking, shareable links, and follow-up Q&A via conversational threading.',
     features: [
       'Docker-containerized Claude CLI for isolated AI research',
@@ -89,6 +90,7 @@ const projects = [
     badges: ['Next.js', 'Docker', 'SQLite', 'Claude CLI'],
     github: null,
     live: '/foodie',
+    sample: '/foodie/share/9f37c4451fd963a6b038bb03ee7df99c',
     desc: 'Public AI restaurant and food recommendation app. Opinionated recs (restaurants, cafes, boba, matcha) backed by real ratings from Google, Yelp, Reddit, and editorial sources, filtered by vibe, price, dietary needs, and distance. Same architecture as Shopper: an async job queue routes queries to a Docker-containerized Claude CLI, isolated on an alt account for untrusted public input.',
     features: [
       'Opinionated recommendations, no filler',
@@ -98,18 +100,9 @@ const projects = [
       'Google OAuth via centralized auth-proxy',
       'Public-app isolation on a dedicated alt account',
     ],
-    visual: 'browser',
-    browserUrl: 'foodie — /foodie',
-    browserContent: `<div style="padding:24px;text-align:center;">
-      <div style="font-size:24px;font-weight:600;color:var(--text-primary);margin-bottom:6px;">Foodie</div>
-      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:18px;">Opinionated food recs. No filler.</div>
-      <div style="display:flex;flex-direction:column;gap:8px;max-width:340px;margin:0 auto 18px;text-align:left;">
-        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Restaurants, cafes, boba, and matcha spots</div>
-        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Real ratings from Google, Yelp, Reddit &amp; editorial</div>
-        <div style="font-size:12px;color:var(--text-secondary);padding:8px 12px;background:var(--bg-primary);border:1px solid var(--border-light);border-radius:8px;">Filtered by vibe, price, dietary needs &amp; distance</div>
-      </div>
-      <div style="display:inline-block;font-size:12px;font-weight:600;color:white;background:linear-gradient(135deg,#f97316,#ef4444);padding:9px 18px;border-radius:8px;">Sign in with Google</div>
-    </div>`,
+    visual: 'screenshot',
+    screenshotFile: 'foodie-result.png',
+    screenshotUrl: 'foodie — Recommendation Result',
     prev: 'shopper',
     next: 'travel',
   },
@@ -123,6 +116,7 @@ const projects = [
     badges: ['Next.js', 'MCP', 'Docker', 'Claude CLI'],
     github: null,
     live: '/travel',
+    sample: '/travel/share/0bda6864ca57984a4e9d023358e510f8',
     desc: 'Award travel optimizer. Searches real-time award availability across airline programs via MCP integrations, cross-references your card portfolio transfer partners, calculates cents-per-point valuations, and finds the best points redemption with hotel credit stacking.',
     features: [
       'Real-time award availability via AwardTravelFinder MCP',
@@ -813,13 +807,16 @@ function generatePage(p) {
   const liveLink = p.live
     ? `<a href="${p.live}" target="_blank" rel="noopener" class="project-hero-link">Visit Live Site <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`
     : '';
+  const sampleLink = p.sample
+    ? `<a href="${p.sample}" target="_blank" rel="noopener" class="project-hero-link">View Sample <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2.5C3.5 2.5 1.7 4.2 1 6c.7 1.8 2.5 3.5 5 3.5s4.3-1.7 5-3.5c-.7-1.8-2.5-3.5-5-3.5z" stroke="currentColor" stroke-width="1.1"/><circle cx="6" cy="6" r="1.4" fill="currentColor"/></svg></a>`
+    : '';
   const demoLink = p.demo
     ? `<a href="${p.demo}" target="_blank" rel="noopener" class="project-hero-link">Watch Demo <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="currentColor"/></svg></a>`
     : '';
   const githubLink = p.github
     ? `<a href="${p.github}" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`
-    : ((p.live || p.demo) ? '' : '<span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>');
-  const heroLinks = `${liveLink}${demoLink}${githubLink}`;
+    : ((p.live || p.demo || p.sample) ? '' : '<span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>');
+  const heroLinks = `${liveLink}${sampleLink}${demoLink}${githubLink}`;
 
   let visualHtml = '';
   if (p.visual === 'terminal') {

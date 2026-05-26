@@ -1,17 +1,19 @@
 # context.md
 
 ## Last Updated
-2026-05-26 — Scrubbed resume PDF (personal email) from all git history; added live-app + visual-portfolio links to README.
+2026-05-26 — Rolled README live-app changes into the visual site (Foodie + Finance + CLI Orchestrator); earlier: scrubbed resume PDF from all git history.
 
 ## Current State
-- Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread").
+- Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread"). 26 generated detail pages.
 - `README.md` is the GitHub-facing landing page; `index.html` is the deployed visual page at `pezant.ca/portfolio`.
-- README now links the visual portfolio and the live apps (Shopper, Foodie, Finance, Travel) plus QuickClaude (demo video) and CLI Orchestrator.
+- README **and** the visual site now cover the live apps: Shopper, Foodie (both public), Finance, Travel (gated), plus QuickClaude (demo video) and CLI Orchestrator (multi-model orchestration).
+- New detail pages: `projects/foodie.html` (browser mock), `projects/finance.html` (arch diagram, NO real balances), `projects/cli-orchestrator.html` (terminal). All live (HTTP 200).
 - Resume PDF is **removed and scrubbed from all git history** — it contained a personal email. README says "Resume available upon request."
-- Remote has only `master`. Working tree clean, all pushed.
+- Remote has only `master`. Working tree clean, all pushed/deployed.
 
 ## Open Work
-- None blocking. (Concurrent commit `661d194` from another session/agent updated `projects/quick-claude.html` and `projects/shopper.html` link targets; merged cleanly into the linear history.)
+- **Foodie thumbnail:** Live Products card is text-only; browser-agent screenshot capture failed (`image readback failed`, occluded Chrome). Swap in a real screenshot later.
+- **Concurrent autonomous agent** also commits + deploys this repo (deploys `projects/` as `rsa-key-20211029`). Expect non-fast-forward pushes — fetch+rebase before pushing. It tends to drop "gated/dead" live + GitHub links from the Finance entry.
 
 ## Environment Notes
 - **Deploy target:** GCP VM, Apache serves static files directly
