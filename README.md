@@ -12,10 +12,16 @@ Resume available upon request.
 
 ## Live Products
 
-Apps I run in production and use regularly. Shopper is fully public; the others are live but gated to my own account.
+Apps I run in production and use regularly. Shopper and Foodie are open to anyone; the rest are access-gated (QuickClaude by key, Finance and Travel to my own account).
+
+### [QuickClaude](https://pezant.ca/portfolio/projects/quick-claude.html) — *access-gated (key-based)*
+One-prompt Claude Code environment bootstrap. A web service where a containerized guide Claude (Opus) walks another Claude Code instance through full environment setup via bidirectional conversation. Express + Docker backend with key-based auth, usage limits, and Discord integration. Built to onboard others into a working Claude Code setup in a single prompt.
 
 ### [Shopper](https://pezant.ca/shopper) — *fully public*
 Public AI buying assistant. Runs skeptic-first product research through a Docker-containerized Claude CLI, producing detailed buying guides with price optimization, cashback stacking, shareable public links, and follow-up Q&A via conversational threading. Next.js + Docker + SQLite.
+
+### [Foodie](https://pezant.ca/foodie) — *fully public*
+Public AI restaurant and food recommendation app. Same architecture as Shopper: an async job queue routes queries to a Docker-containerized Claude CLI, with filter controls for location, occasion, price, and dietary needs. Next.js + Docker + SQLite, isolated on an alt account for untrusted public input.
 
 ### [Finance Tracker](https://pezant.ca/finance) — *live*
 Personal finance dashboard aggregating Plaid and Empower data: budgets, spending analysis, and investment performance in one view. Next.js with NextAuth (single-user, Google OAuth gated).
@@ -49,6 +55,9 @@ Framework for running controlled experiments on Claude CLI instruction environme
 ## Developer Tools
 
 Utilities I built to fill gaps in Claude Code's native capabilities. These make both autonomous and interactive sessions more productive.
+
+### [CLI Orchestrator](https://github.com/npezarro/cli-orchestrator)
+Multi-model orchestration layer that dispatches a single prompt to Claude, Gemini, or Codex CLIs (or fans out to all of them in parallel) through a uniform API. Zero dependencies, uses `execFile` rather than a shell so there's no injection surface. I use it to offload work to cheaper or free models and to run the same task across models for comparison; the trading and autonomous-dev systems use it for shadow runs.
 
 ### [Page Reader](https://github.com/npezarro/page-reader)
 Node.js CLI that uses a headless browser to render JavaScript-heavy pages and extract clean text. Built because Claude Code's built-in web browsing returns empty or broken content on SPAs, modern forums, and React apps. Every agent in the ecosystem falls back to this when default web tools fail.

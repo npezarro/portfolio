@@ -34,7 +34,7 @@ See privateContext for SSH credentials and deploy commands.
 ## Security
 Pre-commit hook blocks the domain name and VM IP in committed code (public repo). Don't put identifying URLs in committed files.
 
-**Intentional exception (owner decision, 2026-05-26):** `README.md` deliberately contains `pezant.ca` links (the visual portfolio at `/portfolio` and the live apps `/shopper`, `/finance`, `/travel`). These were committed with `git commit --no-verify` to bypass the hook. Do NOT "fix" these by removing the domain — the owner wants the portfolio and apps discoverable from the public README. The hook still applies to everything else.
+**Intentional exception (owner decision, 2026-05-26):** `README.md` deliberately contains `pezant.ca` links (the visual portfolio at `/portfolio` and the live apps `/shopper`, `/foodie`, `/finance`, `/travel`, plus the QuickClaude detail page under `/portfolio/projects/`). These were committed with `git commit --no-verify` to bypass the hook. Do NOT "fix" these by removing the domain — the owner wants the portfolio and apps discoverable from the public README. The hook still applies to everything else.
 
 **Never re-add a resume PDF or any personal email.** A resume PDF containing a personal email was removed and scrubbed from all git history (`git-filter-repo` + force-push) on 2026-05-26. The README states "Resume available upon request" instead.
 
