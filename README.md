@@ -124,4 +124,4 @@ I'm a Senior PM with 10+ years of experience, most recently at LinkedIn where I 
 
 The work in this portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ Claude CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.
 
-Based in San Francisco. [LinkedIn](https://linkedin.com/in/npezarro)
+Based in San Francisco. [LinkedIn](https://linkedin.com/in/nicholaspezarro)
