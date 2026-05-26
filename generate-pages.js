@@ -13,7 +13,8 @@ const projects = [
     hue: 45,
     mono: 'QC',
     badges: ['Express.js', 'Docker', 'Claude CLI', 'WebSocket'],
-    github: 'https://github.com/npezarro/quick-claude',
+    github: null,
+    demo: 'https://www.youtube.com/watch?v=X8jcoXETMjU',
     desc: 'One-prompt Claude Code environment bootstrap. A web service where a containerized guide Claude (Opus) walks another Claude Code instance through full environment configuration via bidirectional conversation. Express + Docker backend with key-based auth and Discord integration.',
     features: [
       'Containerized guide Claude (Opus) runs setup conversation',
@@ -61,7 +62,8 @@ const projects = [
     hue: 160,
     mono: 'SH',
     badges: ['Next.js', 'Docker', 'SQLite', 'Claude CLI'],
-    github: 'https://github.com/npezarro/shopper',
+    github: null,
+    live: '/shopper',
     desc: 'Public AI buying assistant. Runs skeptic-first product research through a Docker-containerized Claude CLI, producing detailed buying guides with price optimization, cashback stacking, shareable links, and follow-up Q&A via conversational threading.',
     features: [
       'Docker-containerized Claude CLI for isolated AI research',
@@ -713,9 +715,16 @@ function generatePage(p) {
   const prevLink = p.prev ? `<a href="${p.prev}.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>` : '<span></span>';
   const nextLink = p.next ? `<a href="${p.next}.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : '<span></span>';
 
+  const liveLink = p.live
+    ? `<a href="${p.live}" target="_blank" rel="noopener" class="project-hero-link">Visit Live Site <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`
+    : '';
+  const demoLink = p.demo
+    ? `<a href="${p.demo}" target="_blank" rel="noopener" class="project-hero-link">Watch Demo <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="currentColor"/></svg></a>`
+    : '';
   const githubLink = p.github
     ? `<a href="${p.github}" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`
-    : '<span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>';
+    : ((p.live || p.demo) ? '' : '<span class="private-tag" style="font-size:11px;padding:4px 10px;">Private Repository</span>');
+  const heroLinks = `${liveLink}${demoLink}${githubLink}`;
 
   let visualHtml = '';
   if (p.visual === 'terminal') {
@@ -836,7 +845,7 @@ function generatePage(p) {
           <div class="project-hero-badges">
               ${badges}
           </div>
-          ${githubLink}
+          ${heroLinks}
         </div>
         <div class="project-hero-screenshot">
           <img src="../assets/screenshots/${p.screenshotFile}" alt="${p.name} screenshot">
@@ -848,7 +857,7 @@ function generatePage(p) {
         <div class="project-hero-badges">
             ${badges}
         </div>
-        ${githubLink}
+        ${heroLinks}
       </section>
 
       ${visualHtml}`}
