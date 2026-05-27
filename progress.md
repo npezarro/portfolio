@@ -10,6 +10,12 @@
 - `ddf35b1` Add Foodie + QuickClaude to Live Products, CLI Orchestrator to Dev Tools.
 - (post-closeout) Repointed README QuickClaude link to the public YouTube demo (`X8jcoXETMjU`) instead of the detail page; added `context.md` + `progress.md`.
 
+## 2026-05-26 — Auto-Shorts real interface screenshots
+- `395a5ac` Switch Auto Shorts detail page from flow diagram to real screenshots: dashboard as split-hero, video library in a new "Interface" gallery.
+  - Added optional `gallery[]` field + `galleryHtml` render block to `generate-pages.js`; new `.project-gallery` rule in `project.css`; bumped `project.css?v=2`→`?v=3`.
+  - Images `assets/screenshots/auto-shorts-{dashboard,library}.png`.
+  - Regenerated 26 pages; deployed via staged sudo-copy to `/var/www/html/portfolio/`. Verified live: page + both images 200.
+
 ## 2026-05-26 — Roll README changes into the visual site
 - `b7cdd51` Add Foodie + Finance (Live Products) and CLI Orchestrator (Dev Tools) to `index.html`; 3 new `generate-pages.js` entries → 26 detail pages.
   - Foodie/Finance cards are text-only (no screenshots; browser-agent capture failed with `image readback failed`).

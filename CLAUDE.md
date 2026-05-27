@@ -26,6 +26,7 @@ Variant Q ("Magazine Spread") is the production design. Editorial aesthetic with
 - `arch` — Architecture diagram (boxes + arrows)
 - `flow` — Step-by-step flow diagram
 - `screenshot` — Two-column hero layout with real product screenshot (used by Live Products)
+- Optional `gallery: [{ file, label }]` (works with any visual type) — renders an extra "Interface" section of stacked `mockup-browser` screenshots below the features. Used by Auto Shorts.
 
 ## Deployment
 Static files via SCP to /var/www/html/portfolio/ on the GCP VM. Apache serves directly.
