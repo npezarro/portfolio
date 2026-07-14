@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Autonomous Dev Agent — Nick Pezarro</title>
-  <meta name="description" content="Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for h">
+  <title>Employ — Nick Pezarro</title>
+  <meta name="description" content="AI career assistant. Ingests a user's target roles and background, then generates tailored application materials through a Docker-containerized Claude CLI. Gate">
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="../assets/style.css?v=3">
@@ -44,57 +44,48 @@
       </a>
 
       <section class="project-hero">
-        <span class="project-hero-kicker">02 &middot; Claude Code Ecosystem</span>
-        <h1 class="project-hero-title">Autonomous Dev Agent</h1>
-        <p class="project-hero-subtitle">Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running continuously for months across 30+ repos.</p>
+        <span class="project-hero-kicker">01 &middot; Live Products</span>
+        <h1 class="project-hero-title">Employ</h1>
+        <p class="project-hero-subtitle">AI career assistant. Ingests a user's target roles and background, then generates tailored application materials through a Docker-containerized Claude CLI. Gated behind Google OAuth and isolated on the alt-account pattern for untrusted public input.</p>
         <div class="project-hero-badges">
-            <span class="project-badge">Node.js</span>
+            <span class="project-badge">Next.js</span>
+            <span class="project-badge">NextAuth</span>
+            <span class="project-badge">Docker</span>
             <span class="project-badge">Claude CLI</span>
-            <span class="project-badge">PM2</span>
-            <span class="project-badge">Cron</span>
         </div>
-        <a href="https://github.com/npezarro/autonomousDev" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/employ" target="_blank" rel="noopener" class="project-hero-link">Visit Live Site <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </section>
 
       
       <div class="project-visual">
-        <div class="mockup-terminal">
-          <div class="mockup-terminal-bar">
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-dot"></div>
-            <div class="mockup-terminal-title">autonomous-dev — cron output</div>
-          </div>
-          <div class="mockup-terminal-body"><pre style="margin:0;white-space:pre-wrap;font-family:inherit;"><span class="prompt">$</span> <span class="cmd">autonomous-dev --run</span>
-<span class="dim">[2026-05-12 08:00:01]</span> <span class="info">Scanning 32 repositories for open work...</span>
-<span class="dim">[2026-05-12 08:00:04]</span> Found 7 candidates, ranking by impact...
-<span class="dim">[2026-05-12 08:00:05]</span> <span class="success">Selected: browser-agent — fix CDP timeout on slow pages</span>
-<span class="dim">[2026-05-12 08:00:06]</span> Creating branch: auto/fix-cdp-timeout
-<span class="dim">[2026-05-12 08:00:08]</span> Spawning Claude CLI session...
-<span class="dim">[2026-05-12 08:12:34]</span> Implementation complete. Running build...
-<span class="dim">[2026-05-12 08:12:41]</span> <span class="success">✓ Build passed</span>
-<span class="dim">[2026-05-12 08:12:42]</span> <span class="success">✓ Tests passed (47/47)</span>
-<span class="dim">[2026-05-12 08:12:44]</span> Staging PR for review...
-<span class="dim">[2026-05-12 08:12:45]</span> <span class="info">→ PR #142 created, posted to Discord</span>
-<span class="dim">[2026-05-12 08:12:45]</span> Usage: 5h 34% | 7d 28%</pre></div>
+        <div class="mockup-arch">
+          <div class="arch-label">Input (Google OAuth)</div>
+          <div class="arch-row"><div class="arch-box arch-box--cool">User Roles + Background</div></div>
+          <div class="arch-arrow--down">&#8595;</div>
+          <div class="arch-label">Orchestration</div>
+          <div class="arch-row"><div class="arch-box arch-box--accent">Next.js API + Job Queue</div></div>
+          <div class="arch-arrow--down">&#8595;</div>
+          <div class="arch-label">Generation</div>
+          <div class="arch-row"><div class="arch-box ">Docker-isolated Claude CLI (alt account)</div></div>
+          <div class="arch-arrow--down">&#8595;</div>
+          <div class="arch-label">Output</div>
+          <div class="arch-row"><div class="arch-box ">Tailored Application Materials</div></div>
         </div>
       </div>
 
       <section class="project-features">
         <h3>Key Features</h3>
         <ul class="feature-list">
-          <li>Open-ended repository discovery across 30+ repos</li>
-          <li>Agent profile injection for consistent behavior</li>
-          <li>Post-agent verification (build + test gates)</li>
-          <li>PR gating with human-in-the-loop review</li>
-          <li>Usage-aware execution: proposal mode >50%, halt >75%</li>
-          <li>Discord reporting for all actions taken</li>
+          <li>Role + background ingestion, tailored material generation</li>
+          <li>Docker-bridged Claude CLI on an isolated alt account</li>
+          <li>Google OAuth (NextAuth) gated for public sign-in</li>
+          <li>Async job queue for long-running generations</li>
         </ul>
       </section>
 
       <nav class="project-nav">
-        <a href="employ.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
-        <a href="agent-guidance.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="finance.html" class="project-nav-prev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Previous</a>
+        <a href="autonomous-dev.html" class="project-nav-next">Next <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </nav>
     </main>
 

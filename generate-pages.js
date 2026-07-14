@@ -158,6 +158,35 @@ const projects = [
       ],
     },
     prev: 'travel',
+    next: 'employ',
+  },
+  {
+    slug: 'employ',
+    name: 'Employ',
+    category: 'Live Products',
+    catNum: '01',
+    hue: 200,
+    mono: 'EM',
+    badges: ['Next.js', 'NextAuth', 'Docker', 'Claude CLI'],
+    github: null,
+    live: '/employ',
+    desc: 'AI career assistant. Ingests a user\'s target roles and background, then generates tailored application materials through a Docker-containerized Claude CLI. Gated behind Google OAuth and isolated on the alt-account pattern for untrusted public input.',
+    features: [
+      'Role + background ingestion, tailored material generation',
+      'Docker-bridged Claude CLI on an isolated alt account',
+      'Google OAuth (NextAuth) gated for public sign-in',
+      'Async job queue for long-running generations',
+    ],
+    visual: 'arch',
+    archData: {
+      rows: [
+        { boxes: [{ text: 'User Roles + Background', cls: 'cool' }], label: 'Input (Google OAuth)' },
+        { boxes: [{ text: 'Next.js API + Job Queue', cls: 'accent' }], label: 'Orchestration' },
+        { boxes: [{ text: 'Docker-isolated Claude CLI (alt account)', cls: '' }], label: 'Generation' },
+        { boxes: [{ text: 'Tailored Application Materials', cls: '' }], label: 'Output' },
+      ],
+    },
+    prev: 'finance',
     next: 'autonomous-dev',
   },
   // ---- 02: Claude Code Ecosystem ----
@@ -193,7 +222,7 @@ const projects = [
 <span class="dim">[2026-05-12 08:12:44]</span> Staging PR for review...
 <span class="dim">[2026-05-12 08:12:45]</span> <span class="info">→ PR #142 created, posted to Discord</span>
 <span class="dim">[2026-05-12 08:12:45]</span> Usage: 5h 34% | 7d 28%`,
-    prev: 'finance',
+    prev: 'employ',
     next: 'agent-guidance',
   },
   {

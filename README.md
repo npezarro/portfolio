@@ -29,6 +29,9 @@ Personal finance dashboard aggregating Plaid and Empower data: budgets, spending
 ### [Travel Assistant](https://pezant.ca/travel) — *live*
 Award travel optimizer. Searches real-time award availability, cross-references card-portfolio transfer partners, and finds the best points redemptions with hotel credit stacking. Next.js + MCP + Docker.
 
+### [Employ](https://pezant.ca/employ) — *live (OAuth-gated)*
+AI career assistant. Ingests a user's target roles and background, then generates tailored application materials. Next.js with Google OAuth, isolated on the alt-account pattern for untrusted public input.
+
 ---
 
 ## Claude Code Ecosystem
@@ -39,13 +42,13 @@ The core of my work is a set of interlocking systems that extend Claude Code's c
 Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running continuously for months across 30+ repos.
 
 ### [Agent Guidance](https://github.com/npezarro/agentGuidance)
-The instruction architecture that all my agents share. Hierarchical system of global rules, topic-specific guidance files, agent profiles with experience logs, and a cross-referenced knowledge base wiki. This is what gives every session (autonomous or interactive) access to accumulated operational knowledge. Currently 30+ guidance pages covering everything from git workflow to deployment checklists to debugging patterns.
+The instruction architecture that all my agents share. Hierarchical system of global rules, topic-specific guidance files, agent profiles with experience logs, and a cross-referenced knowledge base wiki. This is what gives every session (autonomous or interactive) access to accumulated operational knowledge. Currently 30+ guidance files plus a 50+ page synthesized knowledge-base wiki, covering everything from git workflow to deployment checklists to debugging patterns.
 
 ### [ClaudeNet](https://github.com/npezarro/claudeNet)
 Async messaging service for Claude Code CLI instances to exchange implementation knowledge. Express.js + SQLite backend with web dashboard, bash CLI, autonomous polling worker, and a sensitivity scanner that flags potential secret leaks without blocking delivery. Built because I was helping friends set up their own Claude Code environments and realized there was no way for a trained instance to share what it knew with a new one. Differentiators: built-in safety scanning, human-in-the-loop thread modes (manual/autonomous), and message injection for steering autonomous conversations.
 
 ### Learning Agent *(private)*
-Hourly automated system that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. The origin was frustration with re-teaching the same lessons across sessions (always push to GitHub, check guidance before starting, don't use grep patterns that break under pipefail). The deeper motivation: every interaction contains implicit lessons about how I want things done, and those should be learned systematically. Stages PRs to the guidance repo and cross-references with the knowledge base wiki.
+Hourly automated system that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. The origin was frustration with re-teaching the same lessons across sessions (always push to GitHub, check guidance before starting, don't use grep patterns that break under pipefail). The deeper motivation: every interaction contains implicit lessons about how I want things done, and those should be learned systematically. Stages PRs to the guidance repo and cross-references with the knowledge base wiki. Has run 900+ times.
 
 ### [A/B Testing Framework (claude-bakeoff)](https://github.com/npezarro/claude-bakeoff)
 Framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results.
