@@ -1,12 +1,14 @@
 # context.md
 
 ## Last Updated
-2026-05-26 — Rolled README live-app changes into the visual site (Foodie + Finance + CLI Orchestrator); earlier: scrubbed resume PDF from all git history.
+2026-07-14 — Added Employ to Live Products (README + site, 27 detail pages), refreshed guidance/learning-agent stats, deployed + verified; earlier: rolled README live-app changes into the visual site.
 
 ## Current State
-- Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread"). 26 generated detail pages.
+- Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread"). 27 generated detail pages.
 - `README.md` is the GitHub-facing landing page; `index.html` is the deployed visual page at `pezant.ca/portfolio`.
-- README **and** the visual site now cover the live apps: Shopper, Foodie (both public), Finance, Travel (gated), plus QuickClaude (demo video) and CLI Orchestrator (multi-model orchestration).
+- README **and** the visual site now cover the live apps: Shopper, Foodie (both public), Finance, Travel, Employ (gated), plus QuickClaude (demo video) and CLI Orchestrator (multi-model orchestration).
+- **Separate GitHub profile README** now exists at `github.com/npezarro/npezarro` (created 2026-07-14) — distinct repo from this one; renders on the profile page.
+- Synthetic Panel is deliberately NOT listed: it's an internal `/api/*`-only service (`/panel` 404s), not a public product.
 - New detail pages: `projects/foodie.html` (browser mock), `projects/finance.html` (arch diagram, NO real balances), `projects/cli-orchestrator.html` (terminal). All live (HTTP 200).
 - Resume PDF is **removed and scrubbed from all git history** — it contained a personal email. README says "Resume available upon request."
 - Remote has only `master`. Working tree clean, all pushed/deployed.

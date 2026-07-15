@@ -23,3 +23,10 @@
   - Foodie = browser mock, CLI Orchestrator = terminal mock.
 - Deployed `index.html` via SCP; `projects/` pages already deployed by the concurrent autonomous agent (owns those files as `rsa-key-20211029`). Verified live: index cards + all 3 detail pages return HTTP 200, no `$` data on Finance.
 - Concurrent agent commits since: `847180d` (LinkedIn URL fix), `dd2c89f`/`22b5273` (dropped Finance GitHub + live links).
+
+## 2026-07-14 — Add Employ to Live Products; refresh stats
+- `353f8fa` Added Employ (`pezant.ca/employ`) to Live Products in `README.md` and `index.html`; new `employ` entry in `generate-pages.js` → 27 detail pages (`projects/employ.html`, arch-diagram visual, OAuth-gated). Fixed prev/next nav chain finance↔employ↔autonomous-dev.
+  - Refreshed two stale README lines: "30+ guidance files plus a 50+ page synthesized knowledge-base wiki"; learning agent "Has run 900+ times."
+- Deployed `index.html` (direct scp, ssh-user owned) + `projects/{employ,autonomous-dev,finance}.html` (sudo cp, rsa-key owned) to `/var/www/html/portfolio/`. Verified live: employ.html HTTP 200, index shows the card, `cf-cache-status: DYNAMIC` (real origin).
+- Note: Synthetic Panel deliberately NOT added — it's an internal `/api/*`-only service, `/panel` 404s (not a public product). See closeout.
+- Full closeout: privateContext/deliverables/closeouts/2026-07-14-resume-portfolio-refresh-url-liveness.md
