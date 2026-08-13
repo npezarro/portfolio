@@ -46,3 +46,6 @@ Pre-commit hook blocks the domain name and VM IP in committed code (public repo)
 
 ## Open Items
 - None. (Resume PDF was removed and scrubbed from git history — it contained a personal email. README now says "available upon request".)
+
+## A deployed static dir owned by a different account rejects scp; stage in /tmp and sudo cp
+Deploying the portfolio link fix, index.html and assets/ scp'd fine but every file in projects/ failed with 'dest open ...: Permission denied' — that directory is owned by a different account than the SSH user, even though its parent is not. The fix is not sudo scp (there is no such thing): scp into /tmp on the VM, then 'sudo cp' plus 'sudo chmod 644' into place. Check ownership per subdirectory before assuming one scp covers a whole static tree, and remember the public-repo secret-scan hook blocks the SSH alias/host/account names, so the literal commands belong in privateContext with only a pointer in the public CLAUDE.md.
