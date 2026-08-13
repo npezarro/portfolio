@@ -943,8 +943,8 @@ function generatePage(p) {
   <meta name="description" content="${p.desc.slice(0, 160).replace(/"/g, '&quot;')}">
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="../assets/style.css?v=3">
-  <link rel="stylesheet" href="../assets/project.css?v=3">
+  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <link rel="stylesheet" href="../assets/project.css?v=4">
   <script defer src="../assets/site.js?v=1"></script>
 </head>
 <body>
