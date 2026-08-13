@@ -33,7 +33,7 @@ Static files via SCP to /var/www/html/portfolio/ on the GCP VM. Apache serves di
 See privateContext for SSH credentials and deploy commands.
 
 - `index.html`, `assets/`, and the doc root are owned by the SSH user, so plain `scp` works.
-- `projects/` is owned by a different account, so a direct `scp` there fails with "Permission denied". Stage into `/tmp` on the VM, then `sudo cp` + `sudo chmod 644` into place. Exact commands: `privateContext/deploy-notes/portfolio.md`.
+- `projects/` is owned by a different account than its own parent, so a direct `scp` there fails with `dest open ...: Permission denied` on every file. There is no "sudo scp": stage into `/tmp` on the VM, then `sudo cp` + `sudo chmod 644` into place. Exact commands: `privateContext/deploy-notes/portfolio.md`.
 - The site sits behind a 60s CDN cache: purge with `privateContext/scripts/cf-purge.sh` after deploying, or a post-deploy curl can validate the old files.
 - When `style.css` or `project.css` changes, bump the `?v=N` token in `index.html`, all `projects/*.html`, AND the template in `generate-pages.js` (currently `v=4`), or regenerated pages will silently revert the token.
 
@@ -46,6 +46,3 @@ Pre-commit hook blocks the domain name and VM IP in committed code (public repo)
 
 ## Open Items
 - None. (Resume PDF was removed and scrubbed from git history — it contained a personal email. README now says "available upon request".)
-
-## A deployed static dir owned by a different account rejects scp; stage in /tmp and sudo cp
-Deploying the portfolio link fix, index.html and assets/ scp'd fine but every file in projects/ failed with 'dest open ...: Permission denied' — that directory is owned by a different account than the SSH user, even though its parent is not. The fix is not sudo scp (there is no such thing): scp into /tmp on the VM, then 'sudo cp' plus 'sudo chmod 644' into place. Check ownership per subdirectory before assuming one scp covers a whole static tree, and remember the public-repo secret-scan hook blocks the SSH alias/host/account names, so the literal commands belong in privateContext with only a pointer in the public CLAUDE.md.
