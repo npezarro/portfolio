@@ -32,6 +32,11 @@ Variant Q ("Magazine Spread") is the production design. Editorial aesthetic with
 Static files via SCP to /var/www/html/portfolio/ on the GCP VM. Apache serves directly.
 See privateContext for SSH credentials and deploy commands.
 
+- `index.html`, `assets/`, and the doc root are owned by the SSH user, so plain `scp` works.
+- `projects/` is owned by a different account, so a direct `scp` there fails with "Permission denied". Stage into `/tmp` on the VM, then `sudo cp` + `sudo chmod 644` into place. Exact commands: `privateContext/deploy-notes/portfolio.md`.
+- The site sits behind a 60s CDN cache: purge with `privateContext/scripts/cf-purge.sh` after deploying, or a post-deploy curl can validate the old files.
+- When `style.css` or `project.css` changes, bump the `?v=N` token in `index.html`, all `projects/*.html`, AND the template in `generate-pages.js` (currently `v=4`), or regenerated pages will silently revert the token.
+
 ## Security
 Pre-commit hook blocks the domain name and VM IP in committed code (public repo). Don't put identifying URLs in committed files.
 
