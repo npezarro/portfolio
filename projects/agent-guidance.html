@@ -5,7 +5,7 @@
   <script>!function(){var s=localStorage.getItem('np_mode');if(s===null)s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-mode',s)}();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Agent Guidance — Nick Pezarro</title>
-  <meta name="description" content="The instruction architecture that all my agents share. Hierarchical system of global rules, topic-specific guidance files, agent profiles with experience logs, ">
+  <meta name="description" content="The instruction harness every agent I run shares. An always-loaded ruleset kept under a hard line budget, on-demand guidance files that each declare their own l">
   <meta name="theme-color" content="#0c0b08" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="../assets/style.css?v=4">
@@ -46,13 +46,13 @@
       <section class="project-hero">
         <span class="project-hero-kicker">02 &middot; Claude Code Ecosystem</span>
         <h1 class="project-hero-title">Agent Guidance</h1>
-        <p class="project-hero-subtitle">The instruction architecture that all my agents share. Hierarchical system of global rules, topic-specific guidance files, agent profiles with experience logs, and a cross-referenced knowledge base wiki. Currently 30+ guidance pages covering everything from git workflow to deployment checklists to debugging patterns.</p>
+        <p class="project-hero-subtitle">The instruction harness every agent I run shares. An always-loaded ruleset kept under a hard line budget, on-demand guidance files that each declare their own load trigger, git and session hooks that mechanically enforce the rules a model would otherwise forget, and subagent definitions. The linked repo is the screened public mirror: 19 guidance files, the hook set, and 8 subagent profiles.</p>
         <div class="project-hero-badges">
             <span class="project-badge">Markdown</span>
             <span class="project-badge">Bash</span>
             <span class="project-badge">Git</span>
         </div>
-        <a href="https://github.com/npezarro/agentGuidance" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://github.com/npezarro/openAgentGuidance" target="_blank" rel="noopener" class="project-hero-link">View on GitHub <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 2H2v8h8V8M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </section>
 
       
@@ -63,8 +63,8 @@
           <div class="arch-arrow--down">&#8595;</div>
           <div class="arch-label">Topic Layer</div>
           <div class="arch-row"><div class="arch-box arch-box--cool">Guidance Files</div>
-              <div class="arch-box arch-box--cool">Agent Profiles</div>
-              <div class="arch-box arch-box--cool">KnowledgeBase</div></div>
+              <div class="arch-box arch-box--cool">Hooks</div>
+              <div class="arch-box arch-box--cool">Subagents</div></div>
           <div class="arch-arrow--down">&#8595;</div>
           <div class="arch-label">Project Layer</div>
           <div class="arch-row"><div class="arch-box ">CLAUDE.md (per repo)</div></div>
@@ -79,11 +79,12 @@
         <h3>Key Features</h3>
         <ul class="feature-list">
           <li>Hierarchical instruction system (global → project → session)</li>
-          <li>30+ topic-specific guidance documents</li>
-          <li>Agent profiles with persistent experience logs</li>
-          <li>Cross-referenced knowledge base wiki (31 pages)</li>
+          <li>Always-loaded ruleset under a hard line budget</li>
+          <li>19 on-demand guidance files, each with a Load when: trigger</li>
+          <li>Git and session hooks that enforce rules mechanically</li>
+          <li>8 subagent definitions (reviewer, debugger, architect, security, verifier)</li>
           <li>Automatic learning propagation from corrections</li>
-          <li>Security scanner for sensitive identifier detection</li>
+          <li>Allowlist-gated publishing with a secret scanner and self-test</li>
         </ul>
       </section>
 
