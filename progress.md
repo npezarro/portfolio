@@ -30,3 +30,11 @@
 - Deployed `index.html` (direct scp, ssh-user owned) + `projects/{employ,autonomous-dev,finance}.html` (sudo cp, rsa-key owned) to `/var/www/html/portfolio/`. Verified live: employ.html HTTP 200, index shows the card, `cf-cache-status: DYNAMIC` (real origin).
 - Note: Synthetic Panel deliberately NOT added — it's an internal `/api/*`-only service, `/panel` 404s (not a public product). See closeout.
 - Full closeout: privateContext/deliverables/closeouts/2026-07-14-resume-portfolio-refresh-url-liveness.md
+
+## 2026-08-19 — Repoint Agent Guidance at the public openAgentGuidance mirror
+- `fa7dbe8` The linked repo `npezarro/agentGuidance` went private, so every link to it was a 404 for anyone without access: `README.md`, `generate-pages.js`, the generated `projects/agent-guidance.html`, and variants `a/`, `b/`, `c/` (which link straight to GitHub rather than to the detail page). All repointed to `npezarro/openAgentGuidance` (public).
+  - Rewrote the copy in all 21 surfaces to describe what is actually behind the link: 19 on-demand guidance files, the hook set, 8 subagent definitions. Dropped the "cross-referenced knowledge base wiki" and "30+ guidance pages" claims, which describe the private original, not the mirror.
+  - Arch diagram Topic Layer changed from `Guidance Files / Agent Profiles / KnowledgeBase` to `Guidance Files / Hooks / Subagents`.
+  - Learning Agent entry still mentions the knowledge-base wiki; left as-is (private project, no clickable link, and the claim is true of the private system).
+- No CSS change, so no `?v=` bump. Deployed root + 18 variant `index.html` (plain scp) and `projects/agent-guidance.html` (staged sudo cp); purged the Cloudflare cache. Verified: sha256 parity local↔VM on 6 files, live pages carry the new copy with zero `npezarro/agentGuidance` occurrences, and the GitHub target returns 200.
+- Open: the openAgentGuidance repo's own GitHub description still reads "Distilled, screened operating lessons...", which describes the pre-2026-08-19 lessons model rather than the harness mirror it is now. That is the first line a visitor arriving from the portfolio reads.
