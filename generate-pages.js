@@ -199,7 +199,7 @@ const projects = [
     mono: 'AD',
     badges: ['Node.js', 'Claude CLI', 'PM2', 'Cron'],
     github: 'https://github.com/npezarro/autonomousDev',
-    desc: 'Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running continuously for months across 30+ repos.',
+    desc: 'Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running for over a year, 330+ runs across 30+ repos.',
     features: [
       'Open-ended repository discovery across 30+ repos',
       'Agent profile injection for consistent behavior',
