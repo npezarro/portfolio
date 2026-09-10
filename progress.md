@@ -1,5 +1,16 @@
 # progress.md
 
+## 2026-09-09 — Positioning + stale-count refresh (reconcile against master resume)
+- `e469c50` Audited the portfolio against `privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md` (Nick's stated source-of-truth resume). It had drifted; brought it current:
+  - **Positioning:** hero, `<meta>`/`og:description`, and README Background now lead with "AI product leader who designs the behavioral and evaluation systems behind LLM products at scale" (was "Senior Product Manager"). Kept the two `Senior Product Manager` job-title lines in Experience untouched.
+  - **Ecosystem size:** `30+` → `120-repo` (hero, meta/OG, masthead num+label `120+ / Repo Ecosystem`, README intro). Actual `~/repos` git-repo count is 130; master resume says "120-repo ecosystem".
+  - **Autonomous Dev:** "running continuously for months across 30+ repos" → "running for over a year, 330+ runs across 30+ repos" (README, `index.html` featured card copy left as-is, `projects/autonomous-dev.html`, `generate-pages.js` source). Kept autonomous-dev's own working-set "30+ repos" (accurate; distinct from the 120-repo ecosystem).
+  - **Learning Agent:** README "Has run 900+ times." → "1,200+ times." (journal shows run #1216+). The count lives ONLY in README — not in `index.html` or the detail page.
+  - **Production stat:** sidebar `1yr+` → `18mo+`.
+- No CSS change → no `?v` bump. Deployed `index.html` (scp) + `projects/autonomous-dev.html` (staged sudo cp); purged Cloudflare. Verified: sha256 parity local↔VM on both files, live pages carry the new copy, stale strings gone, edge `DYNAMIC`.
+- **Outbound-link sweep (all live):** 14 linked GitHub repos all public; patents (Google Patents 200, lens.org 202), QuickClaude YouTube (200), Shopper/Foodie (200) all resolve. The featured Medium article 403s to curl (Cloudflare bot-block) but renders fully via page-reader `--stealth` — link is good.
+- **Not changed (deliberate):** patents section left without a "Granted" label. Master resume tags US20240273306 "(Granted)" but the public number carries the `A1` (application-publication) suffix; did not add an unverified status claim to a public job-facing page. Flag for Nick to confirm. The 18 design variants `a/`–`s/` (reference-only, obscure paths) were not repositioned; only link-rot matters there and all repos are public.
+
 ## 2026-05-26 — Resume scrub + live-app links
 - `86bbf83` Remove resume PDF (personal email), link visual portfolio + live apps
   - Deleted `Nicholas Pezarro Resume.pdf` (contained `n.pezarro@gmail.com`); replaced README link with "Resume available upon request."

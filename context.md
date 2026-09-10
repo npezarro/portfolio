@@ -1,7 +1,10 @@
 # context.md
 
 ## Last Updated
-2026-08-21 — Repointed the Agent Guidance entry from the now-private `agentGuidance` to the public `openAgentGuidance` mirror (22 files) and rewrote its copy to match the mirror's actual contents; deployed + verified. Earlier: Employ added to Live Products (27 detail pages).
+2026-09-09 — Reconciled positioning + drift-prone counts against the source-of-truth master resume (`privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md`): hero/meta/README now lead with "AI product leader…"; ecosystem `30+` → `120-repo`; autonomous-dev "for months" → "over a year, 330+ runs"; learning agent `900+` → `1,200+`. Deployed `index.html` + `projects/autonomous-dev.html`, purged, verified. Outbound-link sweep clean (14 repos public; patents/Medium/YouTube live). Earlier: repointed Agent Guidance to the public `openAgentGuidance` mirror.
+
+## Reconcile against the master resume when refreshing this
+The canonical facts/positioning live in `privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md` ("source of truth for facts"). The portfolio drifts behind it — check that before any refresh. As of 2026-09-09 the resume itself was ALSO stale on the learning-agent run count ("900+"; actual 1,200+) — verify live counts (learning-agent journal `run #N`, `~/repos` git-repo count) rather than trusting either surface.
 
 ## Current State
 - Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread"). 27 generated detail pages.
