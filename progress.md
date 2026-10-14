@@ -1,5 +1,14 @@
 # progress.md
 
+## 2026-10-14 — Claims reconciled with career-reference fact sheet (for Anthropic/OpenAI follow-ups)
+- `00b7cd4` Rewrote every retired/unsourced claim to the approved wording in `privateContext/career-reference/01-master-fact-sheet.md`: patents now "one granted (US 12,632,669 B2, granted 2026-05-19) + one pending"; LinkedIn copy = founding PM on Games / core prompt engineer + SEO lead on Collaborative Articles (~1M weekly search sessions); dropped 900K, -95% scraping, 66-77%, 4-turn, three-layer, "built Games from zero"; earlier roles use fact-sheet wording.
+- Counts re-measured: 146 GitHub repos (140+), autonomous dev 388 runs (370+, daily, since 2026-03), learning agent 1,294 (1,200+, every 8h), bakeoff 108 runs/340 evals, 18,000+ sessions. Bakeoff entry gains the judge-calibration story.
+- README access labels: Travel + Employ are public (Google sign-in), Finance private.
+- LinkedIn URL `in/npezarro` -> `in/nicholaspezarro` in 31 places (index, 27 detail pages, 18 variants).
+- All 18 variants a/-s/ patched for the same claims.
+- Also fixed public `claude-bakeoff` README (cd73f2c): removed the unsourced "~80% judge agreement".
+- Deployed root + variants (scp) + projects/ (staged sudo cp; projects/ now owned by `opc` on the Oracle VM); CF purged; sha256 parity verified; live sweep shows 0 stale strings. Change list for Nick: GDoc 19-W_i9nmIrgcY7NC6onEWvPR9IWQuoPpAGjh1ur4SNY, Notion 3f993b317d77814292d1d97618fd8c2e.
+
 ## 2026-09-09 — Positioning + stale-count refresh (reconcile against master resume)
 - `e469c50` Audited the portfolio against `privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md` (Nick's stated source-of-truth resume). It had drifted; brought it current:
   - **Positioning:** hero, `<meta>`/`og:description`, and README Background now lead with "AI product leader who designs the behavioral and evaluation systems behind LLM products at scale" (was "Senior Product Manager"). Kept the two `Senior Product Manager` job-title lines in Experience untouched.

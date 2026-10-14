@@ -1,10 +1,10 @@
 # context.md
 
 ## Last Updated
-2026-09-09 — Reconciled positioning + drift-prone counts against the source-of-truth master resume (`privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md`): hero/meta/README now lead with "AI product leader…"; ecosystem `30+` → `120-repo`; autonomous-dev "for months" → "over a year, 330+ runs"; learning agent `900+` → `1,200+`. Deployed `index.html` + `projects/autonomous-dev.html`, purged, verified. Outbound-link sweep clean (14 repos public; patents/Medium/YouTube live). Earlier: repointed Agent Guidance to the public `openAgentGuidance` mirror.
+2026-10-14 — Full claims reconcile against `privateContext/career-reference/01-master-fact-sheet.md` (now the canonical source, superseding the master-resume one-pager): patents 1 granted + 1 pending, LinkedIn approved wording, re-measured ecosystem counts, LinkedIn URL fixed to `in/nicholaspezarro` everywhere, all 18 variants patched. See progress.md.
 
 ## Reconcile against the master resume when refreshing this
-The canonical facts/positioning live in `privateContext/bakeoff/tasks/anthropic-growth-pm/workspace/master-resume-onepager.md` ("source of truth for facts"). The portfolio drifts behind it — check that before any refresh. As of 2026-09-09 the resume itself was ALSO stale on the learning-agent run count ("900+"; actual 1,200+) — verify live counts (learning-agent journal `run #N`, `~/repos` git-repo count) rather than trusting either surface.
+The canonical facts live in `privateContext/career-reference/01-master-fact-sheet.md` (and `projects/builder-portfolio.md` for builder counts with re-measure commands); never use figures it lists as retired. The portfolio drifts behind it — check that before any refresh. As of 2026-09-09 the resume itself was ALSO stale on the learning-agent run count ("900+"; actual 1,200+) — verify live counts (learning-agent journal `run #N`, `~/repos` git-repo count) rather than trusting either surface.
 
 ## Current State
 - Static HTML/CSS/JS portfolio, no build step. Production design is variant Q ("Magazine Spread"). 27 generated detail pages.
@@ -28,7 +28,7 @@ The canonical facts/positioning live in `privateContext/bakeoff/tasks/anthropic-
 - **Concurrent autonomous agent** also commits + deploys this repo (deploys `projects/` as `rsa-key-20211029`). Expect non-fast-forward pushes — fetch+rebase before pushing. It tends to drop "gated/dead" live + GitHub links from the Finance entry.
 
 ## Environment Notes
-- **Deploy target:** GCP VM, Apache serves static files directly
+- **Deploy target:** Oracle ARM VM (since 2026-09-30), Apache serves static files directly; `projects/` owned by `opc` (staged sudo cp)
 - **Deploy method:** SCP to `/var/www/html/portfolio/` (see privateContext for SSH creds/commands)
 - **Base path:** `/portfolio`
 - **Build:** none (static); `generate-pages.js` regenerates `projects/*.html`
