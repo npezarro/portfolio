@@ -1,6 +1,6 @@
 # Nick Pezarro
 
-I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 120-repo ecosystem. There's a more visual version of this portfolio at [pezant.ca/portfolio](https://pezant.ca/portfolio).
+I build tools that make AI agents more useful, more reliable, and safer to operate. Most of my work centers on Claude Code, which I've been using as my primary development tool for over a year across a 140-repo ecosystem. There's a more visual version of this portfolio at [pezant.ca/portfolio](https://pezant.ca/portfolio).
 
 The projects below range from production infrastructure I run daily to smaller utilities I built to solve specific problems. They share a common thread: each one started because I hit a real limitation and decided to fix it rather than work around it.
 
@@ -12,7 +12,7 @@ Resume available upon request.
 
 ## Live Products
 
-Apps I run in production and use regularly. Shopper and Foodie are open to anyone; the rest are access-gated (QuickClaude by key, Finance and Travel to my own account).
+Apps I run in production and use regularly. Shopper, Foodie, Travel, and Employ are open to anyone with a Google account; QuickClaude is key-gated and Finance is limited to my own account.
 
 ### [QuickClaude](https://www.youtube.com/watch?v=X8jcoXETMjU) — *access-gated (key-based, demo video)*
 One-prompt Claude Code environment bootstrap. A web service where a containerized guide Claude (Opus) walks another Claude Code instance through full environment setup via bidirectional conversation. Express + Docker backend with key-based auth, usage limits, and Discord integration. Built to onboard others into a working Claude Code setup in a single prompt.
@@ -23,13 +23,13 @@ Public AI buying assistant. Runs skeptic-first product research through a Docker
 ### [Foodie](https://pezant.ca/foodie) — *fully public*
 Public AI restaurant and food recommendation app. Same architecture as Shopper: an async job queue routes queries to a Docker-containerized Claude CLI, with filter controls for location, occasion, price, and dietary needs. Next.js + Docker + SQLite, isolated on an alt account for untrusted public input.
 
-### [Finance Tracker](https://pezant.ca/finance) — *live*
+### [Finance Tracker](https://pezant.ca/finance) — *private (single user)*
 Personal finance dashboard aggregating Plaid and Empower data: budgets, spending analysis, and investment performance in one view. Next.js with NextAuth (single-user, Google OAuth gated).
 
-### [Travel Assistant](https://pezant.ca/travel) — *live*
+### [Travel Assistant](https://pezant.ca/travel) — *public (Google sign-in)*
 Award travel optimizer. Searches real-time award availability, cross-references card-portfolio transfer partners, and finds the best points redemptions with hotel credit stacking. Next.js + MCP + Docker.
 
-### [Employ](https://pezant.ca/employ) — *live (OAuth-gated)*
+### [Employ](https://pezant.ca/employ) — *public (Google sign-in)*
 AI career assistant. Ingests a user's target roles and background, then generates tailored application materials. Next.js with Google OAuth, isolated on the alt-account pattern for untrusted public input.
 
 ---
@@ -39,7 +39,7 @@ AI career assistant. Ingests a user's target roles and background, then generate
 The core of my work is a set of interlocking systems that extend Claude Code's capabilities beyond what ships natively.
 
 ### [Autonomous Dev Agent](https://github.com/npezarro/autonomousDev)
-Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running for over a year, 330+ runs across 30+ repos.
+Cron-scheduled system that runs daily, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human approval. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Running since March 2026, 370+ runs across 30+ repos.
 
 ### [Agent Guidance (openAgentGuidance)](https://github.com/npezarro/openAgentGuidance)
 The instruction harness every agent I run shares, and the reason a session (autonomous or interactive) starts with accumulated operational knowledge instead of a blank slate. An always-loaded ruleset kept under a hard line budget, on-demand guidance files that each declare their own load trigger, git and session hooks that mechanically enforce the rules a model would otherwise forget, subagent definitions, and templates plus an installer that wires it into a fresh machine. The linked repo is the screened public mirror: 19 guidance files, the hook set, and 8 subagent profiles, covering git workflow, deployment checklists, secrets hygiene, and debugging patterns. Publishing is allowlist-gated, so a file stays private until it is deliberately added.
@@ -48,10 +48,10 @@ The instruction harness every agent I run shares, and the reason a session (auto
 Async messaging service for Claude Code CLI instances to exchange implementation knowledge. Express.js + SQLite backend with web dashboard, bash CLI, autonomous polling worker, and a sensitivity scanner that flags potential secret leaks without blocking delivery. Built because I was helping friends set up their own Claude Code environments and realized there was no way for a trained instance to share what it knew with a new one. Differentiators: built-in safety scanning, human-in-the-loop thread modes (manual/autonomous), and message injection for steering autonomous conversations.
 
 ### Learning Agent *(private)*
-Hourly automated system that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. The origin was frustration with re-teaching the same lessons across sessions (always push to GitHub, check guidance before starting, don't use grep patterns that break under pipefail). The deeper motivation: every interaction contains implicit lessons about how I want things done, and those should be learned systematically. Stages PRs to the guidance repo and cross-references with the knowledge base wiki. Has run 1,200+ times.
+Scheduled system (three runs a day) that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and proposes them as changes to the guidance system. The origin was frustration with re-teaching the same lessons across sessions (always push to GitHub, check guidance before starting, don't use grep patterns that break under pipefail). The deeper motivation: every interaction contains implicit lessons about how I want things done, and those should be learned systematically. Stages PRs to the guidance repo and cross-references with the knowledge base wiki. Has run 1,200+ times.
 
 ### [A/B Testing Framework (claude-bakeoff)](https://github.com/npezarro/claude-bakeoff)
-Framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results.
+Framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results with an LLM judge. 100+ runs and 300+ judged evaluations so far. After a re-run with two blind judges inverted a single-judge ranking, I added a calibration step that measures the judge against human labels before its rankings are trusted.
 
 ---
 
@@ -123,8 +123,8 @@ Kroger API integration for grocery price tracking and optimization.
 
 ## Background
 
-I'm an AI product leader with 10+ years of experience, most recently at LinkedIn where I built Games from zero to 7.5M+ WAU and led prompting, product, and SEO for Collaborative Articles (zero to 900K weekly sessions in 7 months). Two US patents in AI systems.
+I'm an AI product leader with 10+ years of experience, most recently at LinkedIn, where I was one of the founding PMs on LinkedIn Games (7.5M+ WAU), owning new-player retention, and one of the core prompt engineers and the SEO lead for Collaborative Articles, LinkedIn's first large-scale LLM content product (~1M weekly search sessions within seven months). Co-inventor on one granted US patent and one pending application.
 
-The work in this portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. The ecosystem runs 50+ Claude CLI invocations daily across autonomous agents, interactive sessions, and supporting infrastructure.
+The work in this portfolio represents what I've been building independently over the past year+, using Claude Code as both the primary tool and the subject of extension. Since March 2026 the ecosystem has logged 18,000+ Claude sessions across autonomous agents, interactive sessions, and supporting infrastructure.
 
 Based in San Francisco. [LinkedIn](https://linkedin.com/in/nicholaspezarro)

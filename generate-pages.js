@@ -199,10 +199,10 @@ const projects = [
     mono: 'AD',
     badges: ['Node.js', 'Claude CLI', 'PM2', 'Cron'],
     github: 'https://github.com/npezarro/autonomousDev',
-    desc: 'Cron-scheduled system that wakes up every 30 minutes, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human review. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Has been running for over a year, 330+ runs across 30+ repos.',
+    desc: 'Cron-scheduled system that runs daily, surveys codebases for the highest-impact work, creates branches, implements features, and stages PRs for human approval. Safety guardrails gate on token usage: proposal-only mode above 50%, full halt above 75%. Running since March 2026, 370+ runs across 30+ repos.',
     features: [
       'Open-ended repository discovery across 30+ repos',
-      'Agent profile injection for consistent behavior',
+      'Shared guidance injection for consistent behavior',
       'Post-agent verification (build + test gates)',
       'PR gating with human-in-the-loop review',
       'Usage-aware execution: proposal mode >50%, halt >75%',
@@ -265,9 +265,9 @@ const projects = [
     mono: 'LA',
     badges: ['Node.js', 'Claude CLI', 'Git'],
     github: null,
-    desc: 'Hourly automated system that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. Every interaction contains implicit lessons about how I want things done, and those should be learned systematically.',
+    desc: 'Scheduled system (three runs a day, 1,200+ runs so far) that reviews all session activity, detects uncaptured corrections and patterns in my interactions with Claude, and propagates them into the guidance system. Every interaction contains implicit lessons about how I want things done, and those should be learned systematically.',
     features: [
-      'Five review passes (learnings, memory-only rules, corrections, prompt observations, profile updates)',
+      'Review passes for learnings, memory-only rules, corrections, and prompt observations',
       'Staged PR workflow for human review',
       'Cross-references with knowledge base wiki',
       'Secrets hygiene scanning',
@@ -288,12 +288,12 @@ const projects = [
     mono: 'CB',
     badges: ['Node.js', 'Bash', 'LLM-as-Judge'],
     github: 'https://github.com/npezarro/claude-bakeoff',
-    desc: 'A/B testing framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results with LLM-as-judge evaluation.',
+    desc: 'A/B testing framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results with LLM-as-judge evaluation. 100+ runs and 300+ judged evaluations so far. After a re-run with two blind judges inverted a single-judge ranking, I added a calibration step that measures the judge against human labels (true-positive and true-negative rates on a dev split, then a held-out test) before its rankings are trusted.',
     features: [
       'Named instruction environments for isolation',
       'Pluggable execution platforms (CLI and Discord)',
       'Arena CLI commands: bake, judge, taste',
-      'LLM-as-judge automated evaluation',
+      'LLM-as-judge automated evaluation, with judge calibration against human labels',
       'Systematic task evaluation with scoring',
       'Discord reporting with comparison results',
     ],
@@ -1021,7 +1021,7 @@ ${galleryHtml}
       <div class="footer-inner">
         <span class="footer-copy">&copy; 2026 Nick Pezarro</span>
         <ul class="footer-links">
-          <li><a href="https://linkedin.com/in/npezarro" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://linkedin.com/in/nicholaspezarro" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://github.com/npezarro" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://tuller.medium.com" target="_blank" rel="noopener">Medium</a></li>
         </ul>
