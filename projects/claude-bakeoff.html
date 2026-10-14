@@ -46,7 +46,7 @@
       <section class="project-hero">
         <span class="project-hero-kicker">02 &middot; Claude Code Ecosystem</span>
         <h1 class="project-hero-title">Claude Bakeoff</h1>
-        <p class="project-hero-subtitle">A/B testing framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results with LLM-as-judge evaluation. 100+ runs and 300+ judged evaluations so far. After a re-run with two blind judges inverted a single-judge ranking, I added a calibration step that measures the judge against human labels (true-positive and true-negative rates on a dev split, then a held-out test) before its rankings are trusted.</p>
+        <p class="project-hero-subtitle">A/B testing framework for running controlled experiments on Claude CLI instruction environments. Test whether a guidance change actually improves output quality by running the same task under two different instruction sets and comparing results with LLM-as-judge evaluation. 100+ runs and 300+ judged evaluations so far. After a re-run with two blind judges inverted a single-judge ranking, I treat single-judge rankings as provisional and built a calibration tool that measures a judge against human labels (true-positive and true-negative rates on a dev split, then a held-out test); labeling is in progress.</p>
         <div class="project-hero-badges">
             <span class="project-badge">Node.js</span>
             <span class="project-badge">Bash</span>
@@ -72,7 +72,7 @@
           <li>Named instruction environments for isolation</li>
           <li>Pluggable execution platforms (CLI and Discord)</li>
           <li>Arena CLI commands: bake, judge, taste</li>
-          <li>LLM-as-judge automated evaluation, with judge calibration against human labels</li>
+          <li>LLM-as-judge automated evaluation, plus a judge-calibration tool (human labels in progress)</li>
           <li>Systematic task evaluation with scoring</li>
           <li>Discord reporting with comparison results</li>
         </ul>

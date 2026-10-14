@@ -166,7 +166,7 @@
             </a>
             <a href="projects/claude-bakeoff.html" class="project" data-reveal>
               <h3 class="project-name">Claude Bakeoff</h3>
-              <p class="project-desc">A/B testing framework for Claude CLI instruction environments: run the same task under two instruction sets and score both with an LLM judge. 100+ runs, 300+ judged evaluations. After a re-run with two blind judges inverted a single-judge ranking, added a calibration step that measures the judge against human labels before its rankings are trusted.</p>
+              <p class="project-desc">A/B testing framework for Claude CLI instruction environments: run the same task under two instruction sets and score both with an LLM judge. 100+ runs, 300+ judged evaluations. After a re-run with two blind judges inverted a single-judge ranking, single-judge rankings are treated as provisional, and a calibration tool now measures judge agreement with human labels (labeling in progress).</p>
               <span class="project-badges"><i>Node.js</i> <i>Bash</i></span>
             </a>
           </div>
@@ -341,14 +341,14 @@
                 <p class="highlight-desc">Co-owned the production prompt spec across a multi-stage generation chain and set the detect-and-repair policy when ~40% of generated articles failed pre-launch testing. Kept editorial review in the loop after finding LLM self-ratings skewed positive. Designed the search launch strategy that reached ~1M weekly sessions within seven months.</p>
               </div>
               <div class="highlight" data-reveal>
-                <span class="highlight-metric">900M+</span>
-                <span class="highlight-label">Public Profiles Defended</span>
-                <p class="highlight-desc">Growth lead on LinkedIn's 2023 anti-scraping initiative. Designed a four-arm experiment with the Trust team that priced each bot challenge in lost search traffic, moving LinkedIn off login-wall challenges; every defense stayed inside a 0.5% WAU budget. Presented the tradeoffs to the CEO and CPO.</p>
+                <span class="highlight-metric">~23M</span>
+                <span class="highlight-label">High-Risk Profiles Measured</span>
+                <p class="highlight-desc">Growth lead on LinkedIn's 2023 anti-scraping initiative for its 900M+ public profiles: owned the measurement of each defense's cost in search traffic, WAU and signups on a targeted ~23M high-risk profile set, where every option stayed inside a 0.5% WAU budget. Earlier, designed a four-arm experiment with the Trust team that priced each bot challenge in lost search traffic and moved LinkedIn off login-wall challenges. Presented the tradeoffs to the CEO and CPO.</p>
               </div>
               <div class="highlight" data-reveal>
                 <span class="highlight-metric">5x</span>
                 <span class="highlight-label">Organic Session Growth</span>
-                <p class="highlight-desc">Wrote LinkedIn's Content SEO strategy; Content SEO grew ~5x (2.7M to 13M weekly sessions) as a multi-team effort. PM'd embedding-based crosslinking (+12% Content SEO sessions) and quality-gated sitemaps (Posts indexation 66% to 82%).</p>
+                <p class="highlight-desc">Wrote LinkedIn's Content SEO strategy; Content SEO grew ~5x (2.7M to 13M weekly sessions) as a multi-team effort. PM'd crosslinking (Profile-to-Posts +12% Content SEO sessions), moved recommendations from co-view to embedding-based retrieval, and gated Posts sitemaps on quality (indexation 66% to 82%).</p>
               </div>
             </div>
           </div>
