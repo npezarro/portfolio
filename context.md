@@ -1,7 +1,7 @@
 # context.md
 
 ## Last Updated
-2026-10-14 — Full claims reconcile against `privateContext/career-reference/01-master-fact-sheet.md` (now the canonical source, superseding the master-resume one-pager): patents 1 granted + 1 pending, LinkedIn approved wording, re-measured ecosystem counts, LinkedIn URL fixed to `in/nicholaspezarro` everywhere, all 18 variants patched. See progress.md.
+2026-10-17 — Claims reconciled against `privateContext/career-reference/01-master-fact-sheet.md` (00b7cd4) plus three review fixes (94117c3: +12% credited to Profile-to-Posts, anti-scraping tile scoped to ~23M high-risk profiles, bakeoff calibration described as in-progress). Deployed and verified. **Patent section is now stale:** a 2026-10-17 audit found 4 granted US patents (12,632,669 B2 + design D1,140,936 / D1,151,643 / D1,151,644) and 26 EU designs; the site still says "1 granted, 1 pending". Updating it awaits Nick's OK. Full closeout: `privateContext/deliverables/closeouts/2026-10-17-portfolio-claims-reconcile-and-patent-audit.md`.
 
 ## Reconcile against the master resume when refreshing this
 The canonical facts live in `privateContext/career-reference/01-master-fact-sheet.md` (and `projects/builder-portfolio.md` for builder counts with re-measure commands); never use figures it lists as retired. The portfolio drifts behind it — check that before any refresh. As of 2026-09-09 the resume itself was ALSO stale on the learning-agent run count ("900+"; actual 1,200+) — verify live counts (learning-agent journal `run #N`, `~/repos` git-repo count) rather than trusting either surface.

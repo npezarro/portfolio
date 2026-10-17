@@ -1,5 +1,9 @@
 # progress.md
 
+## 2026-10-17 — Review fixes + patent audit
+- `94117c3` Three Codex-review fixes verified against career-reference dossiers: SEO tile credits +12% to Profile-to-Posts crosslinking (EBR mentioned separately, no measured lift); anti-scraping tile now "~23M / High-Risk Profiles Measured" with 900M+ as context; bakeoff copy says calibration labeling in progress (no validated rankings). Redeployed index.html + projects/claude-bakeoff.html, verified live.
+- Patent audit (no site change yet): 4 granted US patents, 26 EU designs, pending US/PCT/CN; site patent section pending Nick's decision.
+
 ## 2026-10-14 — Claims reconciled with career-reference fact sheet (for Anthropic/OpenAI follow-ups)
 - `00b7cd4` Rewrote every retired/unsourced claim to the approved wording in `privateContext/career-reference/01-master-fact-sheet.md`: patents now "one granted (US 12,632,669 B2, granted 2026-05-19) + one pending"; LinkedIn copy = founding PM on Games / core prompt engineer + SEO lead on Collaborative Articles (~1M weekly search sessions); dropped 900K, -95% scraping, 66-77%, 4-turn, three-layer, "built Games from zero"; earlier roles use fact-sheet wording.
 - Counts re-measured: 146 GitHub repos (140+), autonomous dev 388 runs (370+, daily, since 2026-03), learning agent 1,294 (1,200+, every 8h), bakeoff 108 runs/340 evals, 18,000+ sessions. Bakeoff entry gains the judge-calibration story.
